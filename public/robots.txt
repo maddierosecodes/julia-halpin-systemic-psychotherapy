@@ -1,0 +1,17 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://juliahalpinSystemic Psychotherapy.com/sitemap.xml
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+
+# Allow all other paths
+Allow: /about
+Allow: /services
+Allow: /contact
+Allow: /privacy-policy 

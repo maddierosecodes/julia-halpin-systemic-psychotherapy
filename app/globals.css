@@ -1,0 +1,139 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Rubik:wght@400;500;700&family=Source+Sans+3:wght@400;600;700&display=swap");
+
+@theme {
+  /* Fonts */
+  --font-primary: "Merriweather", serif; /* Titles */
+  --font-secondary: "Rubik", sans-serif; /* Subtitles / headings */
+  --font-main: "Source Sans 3", sans-serif; /* Body text */
+
+  /* Base Colours */
+  --color-ivory: #f5f2f7; /* replaces: --color-cream */
+  --color-lavender: #c3b5f2; /* replaces: --color-mint */
+  --color-indigo: #2c2c54; /* replaces: --color-sage */
+  --color-rose: #d36969; /* replaces: --color-forest */
+  --color-ink: #4a5568; /* replaces: --color-ink */
+  --color-gold: #c6a664; /* NEW */
+
+  /* Ivory Gradient – replaces: color-cream */
+  --color-ivory-50: #fefefe;
+  --color-ivory-100: #fdfcfd;
+  --color-ivory-200: #fcfbfd;
+  --color-ivory-300: #fbfafc;
+  --color-ivory-400: #faf9fb;
+  --color-ivory-500: #f5f2f7;
+  --color-ivory-600: #ded4e5;
+  --color-ivory-700: #c7b6d2;
+  --color-ivory-800: #af97bf;
+  --color-ivory-900: #9879ad;
+
+  /* Lavender Gradient – replaces: color-mint */
+  --color-lavender-50: #f9f8fe;
+  --color-lavender-100: #f3f0fc;
+  --color-lavender-200: #e7e2fa;
+  --color-lavender-300: #e1daf8;
+  --color-lavender-400: #ddd1f7;
+  --color-lavender-500: #c3b5f2;
+  --color-lavender-600: #a691ec;
+  --color-lavender-700: #896de5;
+  --color-lavender-800: #6c49df;
+  --color-lavender-900: #5026d8;
+
+  /* Indigo Gradient – replaces: color-sage */
+  --color-indigo-50: #e6e6f2;
+  --color-indigo-100: #cdcde5;
+  --color-indigo-200: #b4b4d7;
+  --color-indigo-300: #9b9bca;
+  --color-indigo-400: #8282bd;
+  --color-indigo-500: #2c2c54;
+  --color-indigo-600: #28284b;
+  --color-indigo-700: #232343;
+  --color-indigo-800: #1f1f3a;
+  --color-indigo-900: #1a1a32;
+
+  /* Rose Gradient – replaces: color-forest */
+  --color-rose-50: #fbf0f0;
+  --color-rose-100: #f6e1e1;
+  --color-rose-200: #f2d2d2;
+  --color-rose-300: #eec3c3;
+  --color-rose-400: #e9b4b4;
+  --color-rose-500: #d36969;
+  --color-rose-600: #cc5050;
+  --color-rose-700: #c43939;
+  --color-rose-800: #ac3232;
+  --color-rose-900: #932b2b;
+
+  /* Ink Gradient – replaces: color-ink */
+  --color-ink-50: #eceef1;
+  --color-ink-100: #d8dce3;
+  --color-ink-200: #c5cbd6;
+  --color-ink-300: #b1bac8;
+  --color-ink-400: #9eaaba;
+  --color-ink-500: #4a5568;
+  --color-ink-600: #434d5e;
+  --color-ink-700: #3b4454;
+  --color-ink-800: #343c49;
+  --color-ink-900: #2c333f;
+
+  /* Gold Gradient – new */
+  --color-gold-50: #fdfaf3;
+  --color-gold-100: #f9f2e1;
+  --color-gold-200: #f1e1b9;
+  --color-gold-300: #e9cf91;
+  --color-gold-400: #e0bd6a;
+  --color-gold-500: #c6a664;
+  --color-gold-600: #a78a50;
+  --color-gold-700: #886e3f;
+  --color-gold-800: #69532f;
+  --color-gold-900: #4a381f;
+}
+
+@layer base {
+  html {
+    scroll-padding-top: 12rem; /* Adjust this value to match your header height */
+  }
+}
+
+@layer components {
+  /* Classes for light backgrounds */
+  .highlight-lavender {
+    color: var(--color-lavender-800);
+    font-weight: 600;
+  }
+
+  .highlight-indigo {
+    color: var(--color-indigo-700);
+    font-weight: 600;
+  }
+
+  .emphasis-text {
+    color: var(--color-rose-600);
+    font-style: italic;
+  }
+
+  .highlight-text {
+    color: var(--color-rose-600);
+    font-weight: 600;
+  }
+
+  /* Classes for dark backgrounds */
+  .highlight-lavender-dark {
+    color: var(--color-lavender-300);
+    font-weight: 700;
+  }
+
+  .highlight-indigo-dark {
+    color: var(--color-lavender-100);
+    font-weight: 600;
+  }
+
+  .emphasis-text-dark {
+    color: var(--color-indigo-100);
+    font-style: italic;
+  }
+
+  .highlight-text-dark {
+    color: var(--color-ivory-100);
+    font-weight: 700;
+  }
+}
