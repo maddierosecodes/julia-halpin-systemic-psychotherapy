@@ -48,20 +48,32 @@ export const Header = () => {
       className="fixed top-0 left-0 right-0 z-50 w-full bg-lavender-200 border-b-2 border-gold-500"
       role="banner"
     >
-      <div className="w-full py-4">
+      <div className="w-full py-4 lg:py-2">
         <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
             {/* Title and subtitle group */}
             <Link
               href="/"
-              className="flex flex-col items-center text-center w-[400px]"
+              className="flex flex-col items-center text-center w-[400px] lg:w-[300px]"
               aria-label="Julia Halpin Hypnotherapist - Home"
             >
-              <Title size="4xl" smSize="5xl" colour="indigo" weight="bold">
+              <Title
+                size="4xl"
+                smSize="5xl"
+                lgSize="3xl"
+                colour="indigo"
+                weight="bold"
+              >
                 Child & Family <br />
-                <span className="text-4xl">Therapy Services</span>
+                <span className="text-4xl lg:text-2xl">Therapy Services</span>
               </Title>
-              <Subtitle size="lg" smSize="xl" colour="lavender" weight="medium">
+              <Subtitle
+                size="lg"
+                smSize="xl"
+                lgSize="md"
+                colour="lavender"
+                weight="medium"
+              >
                 Julia Halpin, Systemic Psychotherapist
               </Subtitle>
             </Link>
@@ -72,11 +84,13 @@ export const Header = () => {
             </div>
 
             {/* Contact info and CTA */}
-            <div className="hidden lg:flex items-center gap-6 flex-col w-[400px] justify-end">
-              <BodyText size="md" colour="lavender">
+            <div className="hidden lg:flex items-center gap-4 flex-col w-[400px] lg:w-[300px] justify-end">
+              <BodyText size="sm" colour="lavender">
                 📞 07951652175
               </BodyText>
-              <CTALink href="/contact?type=general">📩 Get in touch</CTALink>
+              <CTALink href="/contact?type=general" variant="compact">
+                📩 Get in touch
+              </CTALink>
             </div>
 
             {/* Mobile menu */}

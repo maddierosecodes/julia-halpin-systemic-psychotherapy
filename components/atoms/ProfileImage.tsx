@@ -4,7 +4,7 @@ import { BLUR_DATA_URL } from "../utils/imageUtils";
 interface ProfileImageProps {
   src: string;
   alt: string;
-  shape?: "circle" | "square" | "rounded";
+  shape?: "circle" | "square" | "rounded" | "tall";
   width?: number;
   height?: number;
   containerClassName?: string;
@@ -24,6 +24,7 @@ export const ProfileImage = ({
     circle: "rounded-full",
     square: "",
     rounded: "rounded-lg",
+    tall: "aspect-[75%] rounded-lg",
   };
 
   return (

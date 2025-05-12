@@ -1,3 +1,4 @@
+import SectionWrapper from "@/components/atoms/SectionWrapper";
 import { HomeHero } from "@/components/organisms/HomeHero";
 import { Metadata } from "next";
 import Script from "next/script";
@@ -5,16 +6,16 @@ import Script from "next/script";
 export const metadata: Metadata = {
   title: "Professional Systemic Psychotherapy in Chorley | Julia Halpin",
   description:
-    "Professional Systemic Psychotherapy in Chorley by Julia Halpin. Expert help with anxiety, stress management, smoking cessation, and phobias through evidence-based solution-focused Systemic Psychotherapy.",
+    "Experienced Systemic Psychotherapist in Chorley offering professional therapy services. Specialising in family therapy, relationships, and personal growth through evidence-based systemic approaches.",
   alternates: {
     canonical: "/",
   },
-  metadataBase: new URL("https://www.lhSystemicPsychotherapy.co.uk"),
+  metadataBase: new URL("https://www.juliahalpin-therapy.co.uk"),
   openGraph: {
     title: "Professional Systemic Psychotherapy in Chorley | Julia Halpin",
     description:
-      "Professional Systemic Psychotherapy in Chorley by Julia Halpin. Expert help with anxiety, stress management, smoking cessation, and phobias through evidence-based solution-focused Systemic Psychotherapy.",
-    url: "https://www.lhSystemic Psychotherapy.co.uk",
+      "Experienced Systemic Psychotherapist in Chorley offering professional therapy services. Specialising in family therapy, relationships, and personal growth through evidence-based systemic approaches.",
+    url: "https://www.juliahalpin-therapy.co.uk",
     siteName: "Julia Halpin Systemic Psychotherapy",
     locale: "en_GB",
     type: "website",
@@ -33,6 +34,14 @@ export const metadata: Metadata = {
   creator: "Julia Halpin",
   publisher: "Julia Halpin Systemic Psychotherapy",
   category: "Health & Wellness",
+  keywords: [
+    "Systemic Psychotherapy",
+    "Family Therapy",
+    "Relationship Therapy",
+    "Chorley",
+    "Lancashire",
+    "Julia Halpin",
+  ],
 };
 
 export default function Home() {
@@ -45,9 +54,10 @@ export default function Home() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "MedicalBusiness",
+            "@id": "https://www.juliahalpin-therapy.co.uk/#business",
             name: "Julia Halpin Systemic Psychotherapy",
             description:
-              "Professional Systemic Psychotherapy services in Chorley, Lancashire, specialising in solution-focused Systemic Psychotherapy for anxiety, stress, phobias, and more.",
+              "Professional Systemic Psychotherapy services in Chorley, Lancashire. Specialising in family therapy, relationship counselling, and personal development through systemic approaches.",
             address: {
               "@type": "PostalAddress",
               addressLocality: "Chorley",
@@ -61,10 +71,10 @@ export default function Home() {
               longitude: -2.6329,
             },
             telephone: "+44 1234 567890",
-            email: "julia@lhSystemic Psychotherapy.co.uk",
-            url: "https://www.lhSystemic Psychotherapy.co.uk",
+            email: "contact@juliahalpin-therapy.co.uk",
+            url: "https://www.juliahalpin-therapy.co.uk",
             sameAs: [
-              "https://www.facebook.com/juliahalpinSystemic Psychotherapy",
+              "https://www.facebook.com/juliahalpintherapy",
               "https://www.linkedin.com/in/julia-halpin",
             ],
             openingHoursSpecification: {
@@ -81,19 +91,34 @@ export default function Home() {
               closes: "20:00",
             },
             priceRange: "££",
-            image:
-              "https://www.lhSystemic Psychotherapy.co.uk/images/julia_alt.jpg",
+            image: "https://www.juliahalpin-therapy.co.uk/images/julia_alt.jpg",
             founder: {
               "@type": "Person",
+              "@id": "https://www.juliahalpin-therapy.co.uk/#founder",
               name: "Julia Halpin",
-              jobTitle: "Professional Hypnotherapist",
+              jobTitle: "Systemic Psychotherapist",
               description:
-                "Professional hypnotherapist with over 36 years of mental health experience",
+                "Experienced Systemic Psychotherapist specialising in family therapy and relationship counselling",
+            },
+            accessibilityFeatures: [
+              "accessibleParking",
+              "wheelchairAccessible",
+              "onlineBooking",
+            ],
+            availableService: {
+              "@type": "MedicalTherapy",
+              name: "Systemic Psychotherapy",
+              description:
+                "Professional systemic psychotherapy services including family therapy and relationship counselling",
             },
           }),
         }}
       />
-      <HomeHero />
+      <main id="main-content" role="main" aria-label="Home page">
+        <SectionWrapper>
+          <HomeHero />
+        </SectionWrapper>
+      </main>
     </>
   );
 }
