@@ -7,11 +7,11 @@ import { BodyText } from "../atoms/BodyText";
 import { Button } from "../atoms/Button";
 
 export type EnquiryType =
-  | "initial-consultation"
-  | "therapy-sessions"
-  | "phobia-package"
-  | "stop-smoking"
-  | "general";
+  | "supervision"
+  | "consultation"
+  | "general"
+  | "family-therapy"
+  | "couple-therapy";
 
 interface FormData {
   firstName: string;
@@ -28,10 +28,10 @@ export const ContactForm = () => {
   const initialEnquiryType =
     urlEnquiryType &&
     [
-      "initial-consultation",
-      "therapy-sessions",
-      "phobia-package",
-      "stop-smoking",
+      "family-therapy",
+      "couple-therapy",
+      "supervision",
+      "consultation",
       "general",
     ].includes(urlEnquiryType)
       ? urlEnquiryType
@@ -165,24 +165,21 @@ export const ContactForm = () => {
           >
             <option
               className="bg-rose-700 text-ivory-50"
-              value="initial-consultation"
+              value="family-therapy"
             >
-              Initial Consultation
+              Family Therapy
             </option>
             <option
               className="bg-rose-700 text-ivory-50"
-              value="therapy-sessions"
+              value="couple-therapy"
             >
-              Therapy Sessions
+              Couple Therapy
             </option>
-            <option
-              className="bg-rose-700 text-ivory-50"
-              value="phobia-package"
-            >
-              Phobia Package
+            <option className="bg-rose-700 text-ivory-50" value="supervision">
+              Supervision
             </option>
-            <option className="bg-rose-700 text-ivory-50" value="stop-smoking">
-              Stop Smoking Session
+            <option className="bg-rose-700 text-ivory-50" value="consultation">
+              MSc Student Consultation
             </option>
             <option className="bg-rose-700 text-ivory-50" value="general">
               General Enquiry
@@ -208,7 +205,7 @@ export const ContactForm = () => {
         </div>
 
         <div className="flex justify-center pt-4">
-          <Button type="submit" variant="primary" size="medium">
+          <Button type="submit" variant="primary" size="medium" darkBg>
             Send Message
           </Button>
         </div>

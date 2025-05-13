@@ -1,7 +1,6 @@
 import { Metadata } from "next";
-import SystemicPsychotherapy from "@/components/organisms/SystemicPsychotherapy";
-import StopSmoking from "@/components/organisms/StopSmoking";
-import OvercomePhobias from "@/components/organisms/OvercomePhobias";
+import FamilyTherapy from "@/components/organisms/FamilyTherapy";
+import CoupleTherapy from "@/components/organisms/CoupleTherapy";
 import SessionsAndFees from "@/components/organisms/SessionsAndFees";
 import SectionWrapper from "@/components/atoms/SectionWrapper";
 
@@ -9,28 +8,28 @@ export const metadata: Metadata = {
   title:
     "Professional Systemic Psychotherapy Services | Julia Halpin Systemic Psychotherapy Chorley",
   description:
-    "Expert Systemic Psychotherapy services in Chorley including stop smoking, phobia treatment, anxiety management, and stress relief. Solution-focused approach with proven results. Flexible sessions available with experienced NHS professional Julia Halpin.",
+    "Expert Systemic Psychotherapy services in Chorley including individual, couple, and family therapy. Solution-focused approach with proven results. Flexible sessions available with experienced NHS professional Julia Halpin.",
   keywords: [
     "Systemic Psychotherapy services",
-    "stop smoking Systemic Psychotherapy",
-    "phobia treatment",
+    "family therapy",
+    "couple therapy",
+    "individual therapy",
     "anxiety management",
     "stress relief",
-    " Systemic Psychotherapy",
-    "Chorley hypnotherapist",
-    "Lancashire Systemic Psychotherapy",
-    "quit smoking",
-    "overcome fears",
-    "relaxation therapy",
+    "Systemic Psychotherapy",
+    "Chorley therapist",
+    "Lancashire therapy",
     "mental wellbeing",
-    "professional Systemic Psychotherapy",
-    "evidence-based hypnosis",
-    "affordable Systemic Psychotherapy",
+    "professional therapy",
+    "evidence-based therapy",
+    "affordable therapy",
+    "supervision",
+    "MSc student consultation",
   ],
   alternates: {
     canonical: "/services",
   },
-  metadataBase: new URL("https://www.lhSystemicPsychotherapy.co.uk"),
+  metadataBase: new URL("https://www.juliahalpin-therapy.co.uk"),
   robots: {
     index: true,
     follow: true,
@@ -46,7 +45,7 @@ export const metadata: Metadata = {
     title:
       "Professional Systemic Psychotherapy Services | Julia Halpin Systemic Psychotherapy Chorley",
     description:
-      "Expert Systemic Psychotherapy services in Chorley including stop smoking, phobia treatment, anxiety management, and stress relief. Solution-focused approach with proven results. Flexible sessions available with experienced NHS professional Julia Halpin.",
+      "Expert Systemic Psychotherapy services in Chorley including individual, couple, and family therapy. Solution-focused approach with proven results. Flexible sessions available with experienced NHS professional Julia Halpin.",
     url: "https://www.lhSystemic Psychotherapy.co.uk/services",
     siteName: "Julia Halpin Systemic Psychotherapy",
     locale: "en_GB",
@@ -65,7 +64,7 @@ export const metadata: Metadata = {
     title:
       "Professional Systemic Psychotherapy Services | Julia Halpin Systemic Psychotherapy Chorley",
     description:
-      "Expert Systemic Psychotherapy services in Chorley including stop smoking, phobia treatment, anxiety management, and stress relief. Solution-focused approach with proven results. Flexible sessions available with experienced NHS professional Julia Halpin.",
+      "Expert Systemic Psychotherapy services in Chorley including individual, couple, and family therapy. Solution-focused approach with proven results. Flexible sessions available with experienced NHS professional Julia Halpin.",
     images: [
       "https://www.lhSystemic Psychotherapy.co.uk/images/recovery_road.jpg",
     ],
@@ -88,13 +87,10 @@ export default function Services() {
       aria-label="Systemic Psychotherapy Services"
     >
       <SectionWrapper>
-        <SystemicPsychotherapy />
+        <FamilyTherapy />
       </SectionWrapper>
       <SectionWrapper>
-        <StopSmoking />
-      </SectionWrapper>
-      <SectionWrapper>
-        <OvercomePhobias />
+        <CoupleTherapy />
       </SectionWrapper>
       <SectionWrapper>
         <SessionsAndFees />

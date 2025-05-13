@@ -1,16 +1,23 @@
 import {
   FaBrain,
-  FaHeartbeat,
-  FaSmokingBan,
-  FaWeight,
-  FaBed,
-  FaUserFriends,
-  FaRunning,
-  FaPills,
+  FaHandHoldingHeart,
+  FaComments,
+  FaChild,
+  FaHeart,
+  FaSadTear,
+  FaUserCheck,
+  FaBriefcase,
+  FaRegHandPeace,
+  FaBandAid,
+  FaStethoscope,
 } from "react-icons/fa";
-import { MdOutlinePsychology } from "react-icons/md";
-import { GiStomach } from "react-icons/gi";
-import { TbMoodPlus } from "react-icons/tb";
+import {
+  MdOutlinePsychology,
+  MdFamilyRestroom,
+  MdSocialDistance,
+} from "react-icons/md";
+import { GiBreakingChain } from "react-icons/gi";
+import { TbMoodSad } from "react-icons/tb";
 import Card from "../atoms/Card";
 import Link from "next/link";
 import { Title } from "../atoms/Title";
@@ -19,63 +26,83 @@ import Script from "next/script";
 
 const treatmentAreas = [
   {
-    name: "Stress",
-    icon: <FaHeartbeat className="w-8 h-8" aria-hidden="true" />,
-    href: "services#supportOffered",
-  },
-  {
-    name: "Anxiety",
+    name: "Anxiety and panic attacks",
     icon: <MdOutlinePsychology className="w-8 h-8" aria-hidden="true" />,
     href: "services#supportOffered",
   },
   {
-    name: "Stop Smoking",
-    icon: <FaSmokingBan className="w-8 h-8" aria-hidden="true" />,
-    href: "services#stop-smoking",
-  },
-  {
-    name: "Phobias",
-    icon: <FaBrain className="w-8 h-8" aria-hidden="true" />,
-    href: "services#overcome-phobias",
-  },
-  {
-    name: "Depression",
-    icon: <TbMoodPlus className="w-8 h-8" aria-hidden="true" />,
+    name: "Depression and low mood",
+    icon: <TbMoodSad className="w-8 h-8" aria-hidden="true" />,
     href: "services#supportOffered",
   },
   {
-    name: "Insomnia",
-    icon: <FaBed className="w-8 h-8" aria-hidden="true" />,
+    name: "Self-harm",
+    icon: <FaBandAid className="w-8 h-8" aria-hidden="true" />,
     href: "services#supportOffered",
   },
   {
-    name: "Confidence",
-    icon: <FaUserFriends className="w-8 h-8" aria-hidden="true" />,
+    name: "Family conflict",
+    icon: <MdFamilyRestroom className="w-8 h-8" aria-hidden="true" />,
     href: "services#supportOffered",
   },
   {
-    name: "Weight Management",
-    icon: <FaWeight className="w-8 h-8" aria-hidden="true" />,
+    name: "Couple and relationship difficulties",
+    icon: <FaHandHoldingHeart className="w-8 h-8" aria-hidden="true" />,
     href: "services#supportOffered",
   },
   {
-    name: "IBS",
-    icon: <GiStomach className="w-8 h-8" aria-hidden="true" />,
+    name: "Communication challenges",
+    icon: <FaComments className="w-8 h-8" aria-hidden="true" />,
     href: "services#supportOffered",
   },
   {
-    name: "OCD",
+    name: "Neurodiversity (Autism and ADHD)",
     icon: <FaBrain className="w-8 h-8" aria-hidden="true" />,
     href: "services#supportOffered",
   },
   {
-    name: "Dependency",
-    icon: <FaPills className="w-8 h-8" aria-hidden="true" />,
+    name: "Parenting and behaviour concerns",
+    icon: <FaChild className="w-8 h-8" aria-hidden="true" />,
     href: "services#supportOffered",
   },
   {
-    name: "Performance",
-    icon: <FaRunning className="w-8 h-8" aria-hidden="true" />,
+    name: "Separation and divorce",
+    icon: <GiBreakingChain className="w-8 h-8" aria-hidden="true" />,
+    href: "services#supportOffered",
+  },
+  {
+    name: "Bereavement and grief",
+    icon: <FaSadTear className="w-8 h-8" aria-hidden="true" />,
+    href: "services#supportOffered",
+  },
+  {
+    name: "Low self-esteem and confidence",
+    icon: <FaUserCheck className="w-8 h-8" aria-hidden="true" />,
+    href: "services#supportOffered",
+  },
+  {
+    name: "Stress (including work-related stress)",
+    icon: <FaBriefcase className="w-8 h-8" aria-hidden="true" />,
+    href: "services#supportOffered",
+  },
+  {
+    name: "Social anxiety",
+    icon: <MdSocialDistance className="w-8 h-8" aria-hidden="true" />,
+    href: "services#supportOffered",
+  },
+  {
+    name: "Emotional regulation difficulties",
+    icon: <FaRegHandPeace className="w-8 h-8" aria-hidden="true" />,
+    href: "services#supportOffered",
+  },
+  {
+    name: "Trauma and difficult life events",
+    icon: <FaHeart className="w-8 h-8" aria-hidden="true" />,
+    href: "services#supportOffered",
+  },
+  {
+    name: "Mental health conditions",
+    icon: <FaStethoscope className="w-8 h-8" aria-hidden="true" />,
     href: "services#supportOffered",
   },
 ];

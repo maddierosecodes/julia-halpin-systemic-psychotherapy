@@ -34,8 +34,6 @@ const navigationLinks = [
         href: "/services#supportOffered",
         label: "Systemic Psychotherapy",
       },
-      { href: "/services#stop-smoking", label: "Stop Smoking" },
-      { href: "/services#overcome-phobias", label: "Overcome Phobias" },
       { href: "/services#sessions-and-fees", label: "Sessions & Fees" },
     ],
   },
@@ -64,7 +62,7 @@ export const Header = () => {
                 colour="indigo"
                 weight="bold"
               >
-                Child & Family <br />
+                Family & Couple <br />
                 <span className="text-4xl lg:text-2xl">Therapy Services</span>
               </Title>
               <Subtitle

@@ -17,15 +17,20 @@ export const HomeHero = () => {
         <div className="lg:transform lg:skew-x-12 xl:transform xl:skew-x-12 leading-normal">
           <header className="flex flex-col text-center">
             <Subtitle size="xl" lgSize="xl" colour="lavender" weight="medium">
-              Family & Couple&apos;s Therapy
+              Family & Couple Therapy
             </Subtitle>
           </header>
 
           <div className="mt-2 text-center mx-auto md:max-w-[80%] lg:max-w-[48ch] xl:max-w-[36ch] lg:mx-auto">
-            <BodyText size="lg" lgSize="lg" variant="light-bg">
-              Thoughtful, evidence-informed therapy for families, couples, and
-              individuals looking to improve their relationships, communication,
-              and emotional well-being.
+            <BodyText size="lg" lgSize="lg" colour="ink-dark">
+              Thoughtful,{" "}
+              <span className="highlight-indigo">
+                evidence-informed therapy
+              </span>{" "}
+              for families, couples, and individuals looking to{" "}
+              <span className="emphasis-text">improve their relationships</span>
+              , <span className="highlight-text">communication</span>, and
+              <span className="highlight-lavender"> emotional well-being</span>.
             </BodyText>
           </div>
         </div>
@@ -59,9 +64,11 @@ export const HomeHero = () => {
         </header>
 
         <div className="mt-2 lg:mt-0 md:py-[1rem] lg:py-[1rem] md:pr-0 lg:mr-4 lg:text-left xl:mb-20 xl:mr-4 xl:text-left">
-          <BodyText size="lg" variant="light-bg">
-            Working together to strengthen relationships, improve communication,
-            and create meaningful change.
+          <BodyText size="lg" colour="ink-dark">
+            Working together to{" "}
+            <span className="highlight-indigo">strengthen relationships</span>,{" "}
+            <span className="highlight-lavender">improve communication</span>,
+            and create <span className="emphasis-text">meaningful change</span>.
           </BodyText>
         </div>
       </div>
@@ -121,7 +128,7 @@ export const HomeHero = () => {
       <div className="mt-8 md:mt-0 lg:mt-0 lg:relative lg:-ml-[2.5rem]">
         <CTALink href="/about#support-offered" variant="compact-centered">
           Find out more about <br />
-          Family & Couple&apos;s Therapy
+          Family & Couple Therapy
         </CTALink>
       </div>
     </div>

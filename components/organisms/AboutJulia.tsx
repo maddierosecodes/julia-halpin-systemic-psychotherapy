@@ -23,37 +23,53 @@ export default function AboutJulia() {
       </Subtitle>
 
       <span className="max-w-3xl my-4 sm:my-8 text-base sm:text-lg text-ink-500">
-        <BodyText size="lg" variant="light-bg">
-          Hi - I&apos;m Julia. I have{" "}
-          <strong className="highlight-indigo">over 30 years experience</strong>{" "}
-          supporting people with their mental health as a{" "}
-          <strong className="highlight-lavender">
-            Registered Mental Health Nurse with the NHS
-          </strong>
-          . <br />I trained in{" "}
-          <strong className="highlight-lavender">Systemic Psychotherapy</strong>{" "}
-          because I believe that it is effective in finding the solutions to
-          overcome the difficulties we face. <br />
-          Whether you&apos;re struggling with{" "}
-          <em className="emphasis-text">
-            anxiety, stress, low mood, panic attacks, OCD
-          </em>{" "}
-          or something else, I&apos;m here to help you take positive, manageable
-          steps towards a solution that works for you. <br />I also offer{" "}
-          <strong className="highlight-text">specialist sessions</strong> for{" "}
-          <em className="emphasis-text">
-            stopping smoking, and overcoming phobias
-          </em>
-          . <br />
-          <Link
-            className="text-rose-800 hover:text-rose-900 underline focus:outline-none focus:ring-2 focus:ring-rose-800 focus:ring-offset-2 transition-colors duration-300"
-            href="/contact?type=initial-consultation"
-            aria-label="Contact Julia to start your Systemic Psychotherapy journey"
-          >
-            Get in touch today
-          </Link>{" "}
-          and we can take the first step together to the future you&apos;ve been
-          envisioning
+        <BodyText size="lg">
+          I&apos;m Julia, a{" "}
+          <span className="highlight-indigo">
+            UKCP-registered Systemic Psychotherapist
+          </span>{" "}
+          with over{" "}
+          <span className="highlight-text">35 years of experience</span> as a
+          Registered Mental Health Nurse (RMN), including{" "}
+          <span className="emphasis-text">
+            22 years in Child and Adolescent Mental Health Services
+          </span>{" "}
+          and{" "}
+          <span className="emphasis-text">13 years in Adult Mental Health</span>
+          .
+          <br />I work with{" "}
+          <span className="highlight-lavender">
+            individuals, couples, and families
+          </span>{" "}
+          to help them understand the patterns of interaction that shape their
+          relationships and wellbeing.
+          <br />
+          <span className="emphasis-text">
+            Systemic psychotherapy offers a compassionate, non-blaming approach
+          </span>{" "}
+          that creates space for each person&apos;s perspective to be heard and
+          valued, working to support clients facing{" "}
+          <span className="highlight-text">
+            anxiety, communication difficulties, neurodiversity, self-esteem
+            issues, and family conflict
+          </span>
+          .
+          <br />I also offer{" "}
+          <span className="highlight-lavender">
+            supervision to qualified and trainee Systemic Psychotherapists &
+            Systemic Practitioners
+          </span>
+          .
+          <br />
+          <span className="highlight-indigo">
+            <Link
+              href="/contact?enquiry=general"
+              className="underline decoration-2 underline-offset-4 hover:text-lavender-500 hover:decoration-lavender-500 transition-all"
+            >
+              Get in touch
+            </Link>{" "}
+            to discuss how I can support you.
+          </span>
         </BodyText>
       </span>
     </div>

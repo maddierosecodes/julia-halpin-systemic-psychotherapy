@@ -4,7 +4,7 @@ import { BodyText } from "../atoms/BodyText";
 import { Subtitle } from "../atoms/Subtitle";
 import { SectionHeading } from "../atoms/SectionHeading";
 import Image from "next/image";
-import headTendrils from "../../public/images/head_tendrils.jpg";
+import flower from "@/public/images/flower.jpg";
 import { StructuredTable } from "../molecules/StructuredTable";
 import { NavLink } from "../atoms/NavLink";
 
@@ -14,13 +14,13 @@ export default function SessionsAndFees() {
 
   // Define availability data with checkmarks
   const availabilityData = {
-    Mon: { Morning: true, Afternoon: true, Evening: true, Night: false },
-    Tue: { Morning: false, Afternoon: false, Evening: true, Night: false },
+    Mon: { Morning: false, Afternoon: false, Evening: false, Night: false },
+    Tue: { Morning: false, Afternoon: false, Evening: false, Night: false },
     Wed: { Morning: false, Afternoon: false, Evening: true, Night: false },
     Thu: { Morning: false, Afternoon: false, Evening: true, Night: false },
-    Fri: { Morning: false, Afternoon: false, Evening: true, Night: false },
-    Sat: { Morning: true, Afternoon: true, Evening: true, Night: false },
-    Sun: { Morning: false, Afternoon: false, Evening: false, Night: false },
+    Fri: { Morning: true, Afternoon: true, Evening: true, Night: false },
+    Sat: { Morning: true, Afternoon: false, Evening: false, Night: false },
+    Sun: { Morning: true, Afternoon: false, Evening: false, Night: false },
   };
 
   return (
@@ -72,25 +72,26 @@ export default function SessionsAndFees() {
                 >
                   Important Information:
                 </Subtitle>
-                <BodyText variant="dark-bg" size="md" colour="ivory">
-                  <span className="highlight-lavender-dark">
-                    48 hours&apos; notice is required
-                  </span>{" "}
-                  for cancellations. Sessions cancelled late or missed may be
-                  charged at the full rate.
-                </BodyText>
+
                 <div className="mt-3">
                   <BodyText variant="dark-bg" size="md" colour="ivory">
-                    Systemic Psychotherapy is{" "}
+                    Therapy is flexible and tailored to your needs.{" "}
                     <span className="highlight-indigo-dark">
-                      highly effective
-                    </span>{" "}
-                    but success cannot be guaranteed.{" "}
-                    <span className="emphasis-text-dark">
-                      Your commitment and participation
+                      Sessions can range from 4-6 meetings to longer-term
+                      support
                     </span>
-                    , including using the relaxation MP3, are key to achieving
-                    the best results.
+                    , with progress reviewed regularly.{" "}
+                    <span className="emphasis-text-dark">
+                      Appointments can be weekly, fortnightly, or spread over
+                      longer periods
+                    </span>
+                    <br />
+                    For family therapy,{" "}
+                    <span className="highlight-lavender-dark">
+                      attendance is flexible - different family members can
+                      attend different sessions
+                    </span>
+                    .
                   </BodyText>
                 </div>
               </div>
@@ -99,8 +100,8 @@ export default function SessionsAndFees() {
             {/* Head Tendrils Image - Desktop Only */}
             <div className="hidden lg:flex items-center justify-center lg:w-1/3 p-2">
               <Image
-                src={headTendrils}
-                alt="Relaxing head tendrils illustration"
+                src={flower}
+                alt="Flower illustration"
                 className="rounded-xl object-contain"
               />
             </div>
@@ -122,15 +123,15 @@ export default function SessionsAndFees() {
                     colour="ivory"
                     isInteractive
                   >
-                    Initial Consultation – £30
+                    Initial Consultation – Free
                   </SectionHeading>
                 </NavLink>
                 <p className="text-sm md:text-base">
-                  A relaxed 30–45 minute session to explore how Systemic
-                  Psychotherapy can help you. <br />
-                  <span className="highlight-indigo-dark">
-                    Includes a free relaxation MP3.
-                  </span>
+                  A{" "}
+                  <span className="highlight-lavender-dark">
+                    20-minute telephone consultation
+                  </span>{" "}
+                  to discuss your needs and how I can help.
                 </p>
               </div>
 
@@ -141,66 +142,68 @@ export default function SessionsAndFees() {
                     colour="ivory"
                     isInteractive
                   >
-                    Therapy Sessions – £65
+                    Couple & Family Therapy
                   </SectionHeading>
                 </NavLink>
                 <p className="text-sm md:text-base">
-                  Ongoing sessions of around 50 minutes, combining
-                  <span className="highlight-lavender-dark">
-                    {" "}
-                    solution-focused talking therapy
-                  </span>{" "}
-                  with{" "}
-                  <span className="emphasis-text-dark">relaxing hypnosis</span>.
-                </p>
-              </div>
-
-              <div>
-                <NavLink href="/contact?type=phobia-package">
-                  <SectionHeading
-                    variant="dark-bg"
-                    colour="ivory"
-                    isInteractive
-                  >
-                    Phobia Package – £225
-                  </SectionHeading>
-                </NavLink>
-                <p className="text-sm md:text-base">
-                  A{" "}
-                  <span className="highlight-lavender-dark">
-                    structured programme
-                  </span>{" "}
-                  of four sessions (50 minutes each) designed to help you
-                  overcome a specific phobia. <br />
-                  <span className="highlight-indigo-dark">
-                    Includes a relaxation MP3.
-                  </span>
-                </p>
-              </div>
-
-              <div>
-                <NavLink href="/contact?type=stop-smoking">
-                  <SectionHeading
-                    variant="dark-bg"
-                    colour="ivory"
-                    isInteractive
-                  >
-                    Stop Smoking Session – £120
-                  </SectionHeading>
-                </NavLink>
-                <p className="text-sm md:text-base">
-                  A single,{" "}
-                  <span className="highlight-lavender-dark">
-                    focused session
-                  </span>{" "}
-                  lasting 90–120 minutes to help you stop smoking.{" "}
-                  <span className="emphasis-text-dark">
-                    No initial consultation required.
-                  </span>{" "}
+                  Sessions range from{" "}
+                  <span className="highlight-indigo-dark">£100 - £150</span>.
                   <br />
-                  <span className="highlight-indigo-dark">
-                    Includes a relaxation MP3.
+                  <span className="emphasis-text-dark">
+                    Please contact me to discuss your specific needs
                   </span>
+                  .
+                </p>
+              </div>
+
+              <div>
+                <NavLink href="/contact?type=supervision">
+                  <SectionHeading
+                    variant="dark-bg"
+                    colour="ivory"
+                    isInteractive
+                  >
+                    Supervision
+                  </SectionHeading>
+                </NavLink>
+                <p className="text-sm md:text-base">
+                  <span className="highlight-lavender-dark">Online:</span>{" "}
+                  <span className="highlight-indigo-dark">
+                    £100 (60 min), £130 (90 min)
+                  </span>
+                  <br />
+                  <span className="highlight-lavender-dark">
+                    In person:
+                  </span>{" "}
+                  <span className="highlight-indigo-dark">
+                    £120 (60 min), £150 (90 min)
+                  </span>
+                </p>
+              </div>
+
+              <div>
+                <NavLink href="/contact?type=consultation">
+                  <SectionHeading
+                    variant="dark-bg"
+                    colour="ivory"
+                    isInteractive
+                  >
+                    MSc Student Consultation Package
+                  </SectionHeading>
+                </NavLink>
+                <p className="text-sm md:text-base">
+                  <span className="emphasis-text-dark">
+                    6 x 60 min sessions
+                  </span>{" "}
+                  for MSc students in Family Therapy
+                  <br />
+                  <span className="highlight-lavender-dark">Online:</span>{" "}
+                  <span className="highlight-indigo-dark">£500</span>
+                  <br />
+                  <span className="highlight-lavender-dark">
+                    In person:
+                  </span>{" "}
+                  <span className="highlight-indigo-dark">£600</span>
                 </p>
               </div>
             </div>

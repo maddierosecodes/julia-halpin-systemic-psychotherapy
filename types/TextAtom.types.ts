@@ -11,7 +11,13 @@ export type TextSize =
   | "7xl"
   | "8xl";
 
-export type TextColour = "ink" | "rose" | "indigo" | "lavender" | "ivory";
+export type TextColour =
+  | "ink"
+  | "rose"
+  | "indigo"
+  | "lavender"
+  | "ivory"
+  | "ink-dark";
 export type TextWeight = "normal" | "medium" | "bold" | "semibold";
 export type TextVariant = "default" | "dark-bg" | "light-bg";
 export type TextTruncate = "none" | "2-lines" | "3-lines";
@@ -89,32 +95,36 @@ export const largeSizeStyles: Record<TextSize, string> = {
 
 export const colourStyles: Record<TextColour, string> = {
   ink: "text-ink-400",
+  "ink-dark": "text-ink-600",
   rose: "text-rose-500",
-  indigo: "text-indigo-600",
+  indigo: "text-indigo-500",
   lavender: "text-lavender-800",
   ivory: "text-ivory-50",
 };
 
 export const smallColourStyles: Record<TextColour, string> = {
   ink: "sm:text-ink-400",
+  "ink-dark": "sm:text-ink-600",
   rose: "sm:text-rose-500",
-  indigo: "sm:text-indigo-600",
+  indigo: "sm:text-indigo-500",
   lavender: "sm:text-lavender-800",
   ivory: "sm:text-ivory-50",
 };
 
 export const mediumColourStyles: Record<TextColour, string> = {
   ink: "md:text-ink-400",
+  "ink-dark": "md:text-ink-600",
   rose: "md:text-rose-500",
-  indigo: "md:text-indigo-600",
+  indigo: "md:text-indigo-500",
   lavender: "md:text-lavender-800",
   ivory: "md:text-ivory-50",
 };
 
 export const largeColourStyles: Record<TextColour, string> = {
   ink: "lg:text-ink-400",
+  "ink-dark": "lg:text-ink-600",
   rose: "lg:text-rose-500",
-  indigo: "lg:text-indigo-600",
+  indigo: "lg:text-indigo-500",
   lavender: "lg:text-lavender-800",
   ivory: "lg:text-ivory-50",
 };

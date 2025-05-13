@@ -1,10 +1,13 @@
 import React from "react";
 import Image from "next/image";
-import nchLogo from "@/public/images/NCH.png";
-import mafsfhLogo from "@/public/images/AfSFH.png";
-import cnhcLogo from "@/public/images/CNHC.jpeg";
-import { FcDiploma1, FcDiploma2 } from "react-icons/fc";
-import { FaBrain } from "react-icons/fa";
+import {
+  FaUserGraduate,
+  FaUserTie,
+  FaHandHoldingMedical,
+} from "react-icons/fa";
+import { MdSupervisorAccount } from "react-icons/md";
+import { GiDiploma } from "react-icons/gi";
+import { IoMdMedical } from "react-icons/io";
 import CardDisplay from "../molecules/CardDisplay";
 import { Title } from "../atoms/Title";
 import rockStackImage from "@/public/images/rock_stack.jpg";
@@ -12,58 +15,28 @@ import rockStackImage from "@/public/images/rock_stack.jpg";
 export default function Qualifications() {
   const qualificationsAndMemberships = [
     {
-      title: "Diploma in  Systemic Psychotherapy (DSFH)",
-      icon: <FcDiploma2 className="w-10 h-10" />,
+      title: "Post Graduate Diploma in Family Therapy",
+      icon: <FaUserGraduate className="w-10 h-10" />,
     },
     {
-      title: "Systemic Psychotherapy in Practice Diploma (HPD)",
-      icon: <FcDiploma1 className="w-10 h-10" />,
+      title: "Tavistock Qualification in Systemic Supervision",
+      icon: <MdSupervisorAccount className="w-10 h-10" />,
     },
     {
-      title: "National Council for Systemic Psychotherapy (NCH)",
-      icon: (
-        <Image
-          src={nchLogo}
-          alt="National Council for Systemic Psychotherapy"
-          width={120}
-          height={120}
-          className="object-contain w-10 h-10"
-          quality={80}
-          loading="lazy"
-        />
-      ),
+      title: "Member of The United Kingdom Council for Psychotherapy (UKCP)",
+      icon: <GiDiploma className="w-10 h-10" />,
     },
     {
-      title: "CBT certification",
-      icon: <FaBrain className="w-10 h-10" />,
+      title: "Member of The Association for Family Therapy (AFT)",
+      icon: <FaUserTie className="w-10 h-10" />,
     },
     {
-      title: "Association for  Systemic Psychotherapy (MAfSFH)",
-      icon: (
-        <Image
-          src={mafsfhLogo}
-          alt="Association for  Systemic Psychotherapy"
-          width={120}
-          height={120}
-          className="object-contain w-10 h-10"
-          quality={80}
-          loading="lazy"
-        />
-      ),
+      title: "Member of the Nursing & Midwifery Council (NMC)",
+      icon: <FaHandHoldingMedical className="w-10 h-10" />,
     },
     {
-      title: "Complementary & Natural Healthcare Council (CNHC)",
-      icon: (
-        <Image
-          src={cnhcLogo}
-          alt="Complementary & Natural Healthcare Council"
-          width={120}
-          height={120}
-          className="object-contain w-10 h-10"
-          quality={80}
-          loading="lazy"
-        />
-      ),
+      title: "Member of The Professional Standards Authority",
+      icon: <IoMdMedical className="w-10 h-10" />,
     },
   ];
 
