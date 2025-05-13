@@ -35,10 +35,7 @@ export const Navigation = ({ links }: NavigationProps) => {
                 href={link.href}
               />
             ) : (
-              <NavLink
-                href={link.href}
-                className="text-lavender-800 hover:text-ink-400"
-              >
+              <NavLink href={link.href} variant="navigation">
                 {link.label}
               </NavLink>
             )}
