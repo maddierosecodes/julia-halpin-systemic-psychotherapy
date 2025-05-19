@@ -65,7 +65,7 @@ export const DropdownMenu = ({ label, items, href }: DropdownMenuProps) => {
           {label}
         </Link>
         <span
-          className="ml-1 text-xs transition-colors duration-500 group-hover:text-indigo-700"
+          className="ml-1 text-xs transition-colors duration-500 group-hover:text-lavender-100"
           aria-hidden="true"
         >
           ▼

@@ -25,8 +25,8 @@ export default function SessionsAndFees() {
 
   return (
     <section
-      id="sessions-and-fees"
-      className="mx-auto max-w-7xl px-4 py-12 xl:border-t-0 border-t border-indigo-700"
+      id="sessionAndFees"
+      className="flex flex-col justify-center items-center gap-3 mx-auto px-4 sm:px-6 md:px-2 max-w-7xl mb-8 mt-4"
       aria-labelledby="sessions-and-fees-heading"
     >
       <div className="text-center mb-8">
@@ -97,7 +97,7 @@ export default function SessionsAndFees() {
               </div>
             </div>
 
-            {/* Head Tendrils Image - Desktop Only */}
+            {/*  Image - Desktop Only */}
             <div className="hidden lg:flex items-center justify-center lg:w-1/3 p-2">
               <Image
                 src={flower}

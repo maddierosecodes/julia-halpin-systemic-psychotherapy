@@ -136,4 +136,55 @@
     color: var(--color-ivory-100);
     font-weight: 700;
   }
+
+  /* Tab Display Component Styles */
+  /* Base tab button styles - kept for reference but not used in other classes */
+  .tab-button {
+    @apply relative lg:relative transform lg:transform skew-x-[-20deg] lg:skew-x-[-20deg] px-4 lg:px-8 py-3 lg:py-3 text-lg lg:text-lg cursor-pointer lg:cursor-pointer border-r-3 lg:border-r-3 border-gold-500 lg:border-gold-500;
+  }
+
+  /* Active tab state - fully flattened */
+  .tab-button-active {
+    @apply relative lg:relative transform lg:transform skew-x-[-20deg] lg:skew-x-[-20deg] px-4 lg:px-8 py-3 lg:py-3 text-lg lg:text-lg cursor-pointer lg:cursor-pointer border-r-3 lg:border-r-3 border-gold-500 lg:border-gold-500 bg-indigo-700/20 lg:bg-indigo-700/20 text-lavender-100 lg:text-lavender-100 border-t-3 lg:border-t-3;
+  }
+
+  /* Inactive tab state with hover effects - fully flattened */
+  .tab-button-inactive {
+    @apply relative lg:relative transform lg:transform skew-x-[-20deg] lg:skew-x-[-20deg] px-4 lg:px-8 py-3 lg:py-3 text-lg lg:text-lg cursor-pointer lg:cursor-pointer border-r-3 lg:border-r-3 border-gold-500 lg:border-gold-500 text-lavender-800 lg:text-lavender-800 hover:text-lavender-100 lg:hover:text-lavender-100 hover:bg-indigo-700/20 lg:hover:bg-indigo-700/20;
+  }
+
+  /* Tab label text styling */
+  .tab-label {
+    @apply transform lg:transform skew-x-[20deg] lg:skew-x-[20deg] whitespace-nowrap lg:whitespace-nowrap font-medium lg:font-medium;
+  }
+
+  /* Content container for tab panels */
+  .tab-content-box {
+    @apply relative lg:relative rounded-b-lg lg:rounded-b-lg p-4 lg:p-6 min-h-[400px] lg:min-h-[400px] bg-indigo-700/20 lg:bg-indigo-700/20 border-3 lg:border-3 border-t-0 lg:border-t-0 border-gold-500 lg:border-gold-500 w-full lg:w-[98%] mx-0 lg:mx-auto mb-4 lg:mb-4;
+  }
+
+  /* Container for tab border lines */
+  .tab-line-container {
+    @apply absolute lg:absolute top-0 lg:top-0 left-0 lg:left-0 w-full lg:w-full h-[3px] lg:h-[3px] pointer-events-none lg:pointer-events-none;
+  }
+
+  /* Individual tab border line */
+  .tab-line {
+    @apply absolute lg:absolute top-0 lg:top-0 h-full lg:h-full bg-gold-500 lg:bg-gold-500;
+  }
+
+  /* Base navigation button styles */
+  .nav-button {
+    @apply absolute lg:absolute top-1/2 lg:top-1/2 -translate-y-1/2 lg:-translate-y-1/2 bg-white lg:bg-white rounded-full lg:rounded-full p-2 lg:p-2 shadow-md lg:shadow-md hover:shadow-lg lg:hover:shadow-lg transition-shadow lg:transition-shadow;
+  }
+
+  /* Left navigation button positioning - fully flattened */
+  .nav-button-left {
+    @apply absolute lg:absolute top-1/2 lg:top-1/2 -translate-y-1/2 lg:-translate-y-1/2 bg-white lg:bg-white rounded-full lg:rounded-full p-2 lg:p-2 shadow-md lg:shadow-md hover:shadow-lg lg:hover:shadow-lg transition-shadow lg:transition-shadow left-0 lg:left-0 -translate-x-4 lg:-translate-x-4;
+  }
+
+  /* Right navigation button positioning - fully flattened */
+  .nav-button-right {
+    @apply absolute lg:absolute top-1/2 lg:top-1/2 -translate-y-1/2 lg:-translate-y-1/2 bg-white lg:bg-white rounded-full lg:rounded-full p-2 lg:p-2 shadow-md lg:shadow-md hover:shadow-lg lg:hover:shadow-lg transition-shadow lg:transition-shadow right-0 lg:right-0 translate-x-4 lg:translate-x-4;
+  }
 }

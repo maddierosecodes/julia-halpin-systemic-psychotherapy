@@ -19,7 +19,7 @@ export const Navigation = ({ links }: NavigationProps) => {
           key={link.href}
           className={`relative transform skew-x-[-20deg] px-8 py-3 text-lg transition-all duration-500 group cursor-pointer hover:bg-indigo-700/20 ${
             index === 0 ? "border-l" : ""
-          } border-r border-gold-500`}
+          } border-r border-gold-500  text-lavender-800 hover:text-lavender-100`}
         >
           {/* Top border that slides from left */}
           <div className="absolute top-0 left-0 w-0 h-[1px] bg-gold-500 transition-all duration-500 group-hover:w-full"></div>
@@ -35,9 +35,7 @@ export const Navigation = ({ links }: NavigationProps) => {
                 href={link.href}
               />
             ) : (
-              <NavLink href={link.href} variant="navigation">
-                {link.label}
-              </NavLink>
+              <NavLink href={link.href}>{link.label}</NavLink>
             )}
           </div>
         </li>

@@ -3,6 +3,9 @@ import FamilyTherapy from "@/components/organisms/FamilyTherapy";
 import CoupleTherapy from "@/components/organisms/CoupleTherapy";
 import SessionsAndFees from "@/components/organisms/SessionsAndFees";
 import SectionWrapper from "@/components/atoms/SectionWrapper";
+import Supervision from "@/components/organisms/Supervision";
+import Consultation from "@/components/organisms/Consultation";
+import TabDisplay from "@/components/molecules/TabDisplay";
 
 export const metadata: Metadata = {
   title:
@@ -79,22 +82,38 @@ export const metadata: Metadata = {
   publisher: "Julia Halpin Systemic Psychotherapy",
 };
 
+const SERVICE_TABS = [
+  {
+    id: "family-therapy",
+    label: "Family Therapy",
+    content: <FamilyTherapy />,
+  },
+  {
+    id: "couple-therapy",
+    label: "Couple Therapy",
+    content: <CoupleTherapy />,
+  },
+  {
+    id: "supervision",
+    label: "Supervision",
+    content: <Supervision />,
+  },
+  {
+    id: "consultation",
+    label: "Consultation",
+    content: <Consultation />,
+  },
+];
+
 export default function Services() {
   return (
-    <main
-      role="main"
-      className="mt-10"
-      aria-label="Systemic Psychotherapy Services"
-    >
+    <div className="w-full mt-10" aria-label="Systemic Psychotherapy Services">
       <SectionWrapper>
-        <FamilyTherapy />
-      </SectionWrapper>
-      <SectionWrapper>
-        <CoupleTherapy />
+        <TabDisplay tabs={SERVICE_TABS} />
       </SectionWrapper>
       <SectionWrapper>
         <SessionsAndFees />
       </SectionWrapper>
-    </main>
+    </div>
   );
 }
