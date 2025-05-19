@@ -26,7 +26,7 @@ export default function SessionsAndFees() {
   return (
     <section
       id="sessionAndFees"
-      className="flex flex-col justify-center items-center gap-3 mx-auto px-4 sm:px-6 md:px-2 max-w-7xl mb-8 mt-4"
+      className="flex flex-col justify-center items-center gap-3 mx-auto px-4 sm:px-6 md:px-2 xl:px-0 max-w-7xl mb-8 mt-4"
       aria-labelledby="sessions-and-fees-heading"
     >
       <div className="text-center mb-8">
