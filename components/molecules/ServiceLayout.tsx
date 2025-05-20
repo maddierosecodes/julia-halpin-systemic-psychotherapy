@@ -170,7 +170,6 @@ export default function ServiceLayout({
                 smSize="xl"
                 lgSize="lg"
                 colour="ivory"
-                className="w-full"
               >
                 {children}
               </BodyText>
