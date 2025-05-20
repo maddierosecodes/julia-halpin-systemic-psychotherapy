@@ -31,7 +31,8 @@ export default function ServiceLayout({
   const textContainerRef = useRef<HTMLDivElement>(null);
 
   const handleScroll = () => {
-    if (!hasScrolled && textContainerRef.current?.scrollTop > 0) {
+    const scrollTop = textContainerRef.current?.scrollTop ?? 0;
+    if (!hasScrolled && scrollTop > 0) {
       setHasScrolled(true);
     }
   };
