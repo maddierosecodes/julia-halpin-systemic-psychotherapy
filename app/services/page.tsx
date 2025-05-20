@@ -6,6 +6,7 @@ import SectionWrapper from "@/components/atoms/SectionWrapper";
 import Supervision from "@/components/organisms/Supervision";
 import Consultation from "@/components/organisms/Consultation";
 import TabDisplay from "@/components/molecules/TabDisplay";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title:
@@ -109,7 +110,9 @@ export default function Services() {
   return (
     <div className="w-full mt-10" aria-label="Systemic Psychotherapy Services">
       <SectionWrapper>
-        <TabDisplay tabs={SERVICE_TABS} />
+        <Suspense fallback={<div>Loading...</div>}>
+          <TabDisplay tabs={SERVICE_TABS} />
+        </Suspense>
       </SectionWrapper>
       <SectionWrapper>
         <SessionsAndFees />
