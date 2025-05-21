@@ -62,7 +62,6 @@ export const Header = () => {
                 lgSize="3xl"
                 colour="indigo"
                 weight="bold"
-                className="leading-tight"
               >
                 Family & Couple <br />
                 <span className="text-2xl sm:text-3xl lg:text-2xl">
