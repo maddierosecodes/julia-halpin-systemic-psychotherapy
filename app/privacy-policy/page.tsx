@@ -42,7 +42,7 @@ export default function PrivacyPolicy() {
         }}
       />
       <main
-        className="min-h-screen w-full px-6 md:px-20 pt-20 pb-5 relative"
+        className="min-h-screen w-full px-6 md:px-20 pt-16 md:pt-20 pb-5 relative"
         role="main"
       >
         <section

@@ -80,7 +80,7 @@ export const metadata: Metadata = {
 export default function About() {
   return (
     <main
-      className="mt-10"
+      className="mt-6 md:mt-10"
       role="main"
       aria-label="About Julia Halpin Systemic Psychotherapy"
     >

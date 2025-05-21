@@ -66,7 +66,7 @@ export const metadata: Metadata = {
 export default function Contact() {
   return (
     <main
-      className="flex items-center justify-center px-4 py-8 pt-16"
+      className="flex items-center justify-center px-4 py-8 pt-12 md:pt-16"
       role="main"
       aria-label="Contact Julia Halpin Systemic Psychotherapy"
     >

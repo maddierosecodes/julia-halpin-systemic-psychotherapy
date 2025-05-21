@@ -108,7 +108,10 @@ const SERVICE_TABS = [
 
 export default function Services() {
   return (
-    <div className="w-full mt-10" aria-label="Systemic Psychotherapy Services">
+    <div
+      className="w-full mt-6 md:mt-10"
+      aria-label="Systemic Psychotherapy Services"
+    >
       <SectionWrapper>
         <Suspense fallback={<div>Loading...</div>}>
           <TabDisplay tabs={SERVICE_TABS} />
