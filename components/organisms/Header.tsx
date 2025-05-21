@@ -87,7 +87,7 @@ export const Header = () => {
             {/* Contact info and CTA */}
             <div className="hidden lg:flex items-center gap-4 flex-col w-[400px] lg:w-[300px] justify-end">
               <BodyText size="sm" colour="lavender">
-                📞 07951652175
+                📞 07538 001 922
               </BodyText>
               <CTALink href="/contact?type=general" variant="compact">
                 📩 Get in touch

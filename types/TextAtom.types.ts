@@ -17,7 +17,8 @@ export type TextColour =
   | "indigo"
   | "lavender"
   | "ivory"
-  | "ink-dark";
+  | "ink-dark"
+  | "lavender-light";
 export type TextWeight = "normal" | "medium" | "bold" | "semibold";
 export type TextVariant = "default" | "dark-bg" | "light-bg";
 export type TextTruncate = "none" | "2-lines" | "3-lines";
@@ -100,6 +101,7 @@ export const colourStyles: Record<TextColour, string> = {
   indigo: "text-indigo-500",
   lavender: "text-lavender-800",
   ivory: "text-ivory-50",
+  "lavender-light": "text-lavender-500",
 };
 
 export const smallColourStyles: Record<TextColour, string> = {
@@ -109,6 +111,7 @@ export const smallColourStyles: Record<TextColour, string> = {
   indigo: "sm:text-indigo-500",
   lavender: "sm:text-lavender-800",
   ivory: "sm:text-ivory-50",
+  "lavender-light": "sm:text-lavender-500",
 };
 
 export const mediumColourStyles: Record<TextColour, string> = {
@@ -118,6 +121,7 @@ export const mediumColourStyles: Record<TextColour, string> = {
   indigo: "md:text-indigo-500",
   lavender: "md:text-lavender-800",
   ivory: "md:text-ivory-50",
+  "lavender-light": "md:text-lavender-500",
 };
 
 export const largeColourStyles: Record<TextColour, string> = {
@@ -127,6 +131,7 @@ export const largeColourStyles: Record<TextColour, string> = {
   indigo: "lg:text-indigo-500",
   lavender: "lg:text-lavender-800",
   ivory: "lg:text-ivory-50",
+  "lavender-light": "lg:text-lavender-500",
 };
 
 export const weightStyles: Record<TextWeight, string> = {
@@ -139,7 +144,7 @@ export const weightStyles: Record<TextWeight, string> = {
 export const variantStyles: Record<TextVariant, string> = {
   default: "",
   "dark-bg": "text-ivory-50",
-  "light-bg": "text-ink-400",
+  "light-bg": "text-ink-600",
 };
 
 export const truncateStyles: Record<TextTruncate, string> = {

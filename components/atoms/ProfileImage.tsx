@@ -9,6 +9,7 @@ interface ProfileImageProps {
   height?: number;
   containerClassName?: string;
   priority?: boolean;
+  border?: boolean;
 }
 
 export const ProfileImage = ({
@@ -19,6 +20,7 @@ export const ProfileImage = ({
   height = 576,
   containerClassName = "",
   priority = false,
+  border = false,
 }: ProfileImageProps) => {
   const shapeClasses = {
     circle: "rounded-full",
@@ -29,7 +31,9 @@ export const ProfileImage = ({
 
   return (
     <figure
-      className={`relative overflow-hidden ${shapeClasses[shape]} ${containerClassName}`}
+      className={`relative overflow-hidden ${
+        shapeClasses[shape]
+      } ${containerClassName} ${border ? "border-3 border-gold" : ""}`}
       style={{ width: "100%", height: "100%" }}
       role="img"
       aria-label={alt}

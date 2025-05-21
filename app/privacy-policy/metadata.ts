@@ -1,29 +1,36 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Julia Halpin Systemic Psychotherapy",
+  title: "Privacy Policy | Family and Couple Therapy Services",
   description:
-    "Privacy policy for Julia Halpin Systemic Psychotherapy. Learn how we collect, use, and protect your personal information in accordance with UK GDPR.",
+    "Privacy policy for Family and Couple Therapy Services. Learn how we collect, use, and protect your personal information in accordance with UK GDPR and professional confidentiality standards.",
   alternates: {
-    canonical: "/privacy-policy",
+    canonical:
+      "https://www.familyandcoupletherapyservices.co.uk/privacy-policy",
   },
-  metadataBase: new URL("https://www.lhSystemicPsychotherapy.co.uk"),
+  metadataBase: new URL("https://www.familyandcoupletherapyservices.co.uk"),
   openGraph: {
-    title: "Privacy Policy | Julia Halpin Systemic Psychotherapy",
+    title: "Privacy Policy | Family and Couple Therapy Services",
     description:
-      "Privacy policy for Julia Halpin Systemic Psychotherapy. Learn how we collect, use, and protect your personal information in accordance with UK GDPR.",
-    url: "https://www.lhSystemicPsychotherapy.co.uk/privacy-policy",
-    siteName: "Julia Halpin Systemic Psychotherapy",
+      "Privacy policy for Family and Couple Therapy Services. Learn how we collect, use, and protect your personal information in accordance with UK GDPR and professional confidentiality standards.",
+    url: "https://www.familyandcoupletherapyservices.co.uk/privacy-policy",
+    siteName: "Family and Couple Therapy Services",
     locale: "en_GB",
-    type: "website",
+    type: "article",
   },
   robots: {
     index: true,
     follow: true,
     nocache: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "none",
+      "max-snippet": -1,
+    },
   },
   authors: [{ name: "Julia Halpin" }],
   creator: "Julia Halpin",
-  publisher: "Julia Halpin Systemic Psychotherapy",
+  publisher: "Family and Couple Therapy Services",
   category: "Legal",
 };

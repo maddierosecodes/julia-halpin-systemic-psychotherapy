@@ -1,28 +1,28 @@
 import { Metadata } from "next";
 import { ContactForm } from "@/components/organisms/ContactForm";
 import { Suspense } from "react";
+import Script from "next/script";
 
 export const metadata: Metadata = {
-  title:
-    "Contact Julia Halpin | Professional Systemic Psychotherapy in Chorley",
+  title: "Contact Julia Halpin | Systemic Psychotherapist in Chorley",
   description:
-    "Get in touch with Julia Halpin for professional Systemic Psychotherapy services in Chorley. Book a consultation or ask questions about how solution-focused Systemic Psychotherapy can help you achieve positive change.",
+    "Contact Julia Halpin to enquire about family, couple, and relationship therapy. Offering systemic psychotherapy sessions online or in Chorley. Book a consultation today.",
   keywords: [
-    "contact hypnotherapist",
-    "book Systemic Psychotherapy session",
-    "Chorley Systemic Psychotherapy consultation",
-    " Systemic Psychotherapy booking",
-    "Systemic Psychotherapy appointment",
-    "mental health consultation",
-    "Lancashire hypnotherapist contact",
-    "professional Systemic Psychotherapy consultation",
-    "Systemic Psychotherapy enquiry",
     "contact Julia Halpin",
+    "systemic psychotherapy contact",
+    "Chorley therapy booking",
+    "book family therapist",
+    "couples counselling Chorley",
+    "Lancashire psychotherapy enquiry",
+    "mental health support contact",
+    "relationship therapy consultation",
+    "online psychotherapy appointment",
+    "family therapist Chorley",
   ],
   alternates: {
-    canonical: "/contact",
+    canonical: "https://www.familyandcoupletherapyservices.co.uk/contact",
   },
-  metadataBase: new URL("https://www.lhSystemicPsychotherapy.co.uk"),
+  metadataBase: new URL("https://www.familyandcoupletherapyservices.co.uk"),
   robots: {
     index: true,
     follow: true,
@@ -35,21 +35,30 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title:
-      "Contact Julia Halpin | Professional Systemic Psychotherapy in Chorley",
+    title: "Contact Julia Halpin | Systemic Psychotherapist in Chorley",
     description:
-      "Get in touch with Julia Halpin for professional Systemic Psychotherapy services in Chorley. Book a consultation or ask questions about how solution-focused Systemic Psychotherapy can help you achieve positive change.",
-    url: "https://www.lhSystemic Psychotherapy.co.uk/contact",
-    siteName: "Julia Halpin Systemic Psychotherapy",
+      "Contact Julia Halpin to enquire about family, couple, and relationship therapy. Offering systemic psychotherapy sessions online or in Chorley. Book a consultation today.",
+    url: "https://www.familyandcoupletherapyservices.co.uk/contact",
+    siteName: "Family and Couple Therapy Services",
     locale: "en_GB",
     type: "website",
+    images: [
+      {
+        url: "https://www.familyandcoupletherapyservices.co.uk/images/julia_halpin.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Julia Halpin, Systemic Psychotherapist in Chorley",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "Contact Julia Halpin | Professional Systemic Psychotherapy in Chorley",
+    title: "Contact Julia Halpin | Systemic Psychotherapist in Chorley",
     description:
-      "Get in touch with Julia Halpin for professional Systemic Psychotherapy services in Chorley. Book a consultation or ask questions about how solution-focused Systemic Psychotherapy can help you achieve positive change.",
+      "Get in touch with Julia Halpin for systemic psychotherapy. Enquire about therapy for families, couples, and individuals in Chorley or online.",
+    images: [
+      "https://www.familyandcoupletherapyservices.co.uk/images/julia_halpin.jpg",
+    ],
   },
   verification: {
     google: "your-google-site-verification-code",
@@ -58,21 +67,43 @@ export const metadata: Metadata = {
   },
   authors: [{ name: "Julia Halpin" }],
   creator: "Julia Halpin",
-  publisher: "Julia Halpin Systemic Psychotherapy",
-  category: "Contact",
+  publisher: "Family and Couple Therapy Services",
+  category: "Health & Wellness",
   classification: "Professional Services",
 };
 
 export default function Contact() {
   return (
-    <main
-      className="flex items-center justify-center px-4 py-8 pt-12 md:pt-16"
-      role="main"
-      aria-label="Contact Julia Halpin Systemic Psychotherapy"
-    >
-      <Suspense fallback={<div>Loading...</div>}>
-        <ContactForm />
-      </Suspense>
-    </main>
+    <>
+      <Script
+        id="contact-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MedicalOrganization",
+            name: "Family and Couple Therapy Services",
+            url: "https://www.familyandcoupletherapyservices.co.uk",
+            contactPoint: {
+              "@type": "ContactPoint",
+              telephone: "+44 7538 001 922",
+              contactType: "Customer Service",
+              areaServed: "GB",
+              availableLanguage: "English",
+              email: "julia.halpin@familyandcoupletherapyservices.co.uk",
+            },
+          }),
+        }}
+      />
+      <main
+        className="flex items-center justify-center px-4 py-2 pt-0 md:pt-16"
+        role="main"
+        aria-label="Contact Julia Halpin Systemic Psychotherapy"
+      >
+        <Suspense fallback={<div>Loading...</div>}>
+          <ContactForm />
+        </Suspense>
+      </main>
+    </>
   );
 }

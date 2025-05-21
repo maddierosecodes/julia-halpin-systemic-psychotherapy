@@ -8,28 +8,22 @@ import SectionWrapper from "@/components/atoms/SectionWrapper";
 // import Articles from "@/components/organisms/Articles";
 
 export const metadata: Metadata = {
-  title: "About Julia Halpin | Professional Hypnotherapist in Chorley",
+  title: "About Julia Halpin | Systemic Psychotherapist in Chorley",
   description:
-    "Meet Julia Halpin, a professional hypnotherapist with over 30 years of mental health experience. Specialising in solution-focused Systemic Psychotherapy for anxiety, stress, phobias, and more in Chorley and surrounding areas. Discover how his unique approach combining NHS experience with modern Systemic Psychotherapy techniques can help you achieve lasting positive change.",
+    "Learn about Julia Halpin, a Systemic Psychotherapist based in Chorley. With over 30 years of mental health experience, she offers evidence-based family, couple, and relationship therapy both online and in-person.",
   keywords: [
     "Julia Halpin",
-    "hypnotherapist",
-    "Chorley",
-    " Systemic Psychotherapy",
-    "anxiety treatment",
-    "stress management",
-    "mental health",
-    "NHS nurse",
-    "professional Systemic Psychotherapy",
-    "stop smoking",
-    "phobia treatment",
-    "Lancashire hypnotherapist",
-    " therapy",
-    "mental health support",
-    "Systemic Psychotherapy near me",
+    "Systemic Psychotherapy",
+    "family therapy",
+    "relationship therapy",
+    "couple therapy",
+    "Chorley therapist",
+    "Lancashire mental health",
+    "neurodiversity support",
+    "mental health therapist Chorley",
   ],
   alternates: {
-    canonical: "/about",
+    canonical: "https://www.familyandcoupletherapyservices.co.uk/about",
   },
   robots: {
     index: true,
@@ -43,29 +37,29 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "About Julia Halpin | Professional Hypnotherapist in Chorley",
+    title: "About Julia Halpin | Systemic Psychotherapist in Chorley",
     description:
-      "Meet Julia Halpin, a professional hypnotherapist with over 30 years of mental health experience. Specialising in solution-focused Systemic Psychotherapy for anxiety, stress, phobias, and more in Chorley and surrounding areas. Discover how his unique approach combining NHS experience with modern Systemic Psychotherapy techniques can help you achieve lasting positive change.",
-    url: "https://juliahalpinSystemic Psychotherapy.com/about",
-    siteName: "Julia Halpin Systemic Psychotherapy",
+      "Learn about Julia Halpin, a Systemic Psychotherapist based in Chorley. With over 30 years of mental health experience, she offers evidence-based family, couple, and relationship therapy both online and in-person.",
+    url: "https://www.familyandcoupletherapyservices.co.uk/about",
+    siteName: "Family and Couple Therapy Services",
     locale: "en_GB",
-    type: "website",
+    type: "profile",
     images: [
       {
-        url: "https://juliahalpinSystemic Psychotherapy.com/images/julia_alt.jpg",
+        url: "https://www.familyandcoupletherapyservices.co.uk/images/julia_halpin.jpg",
         width: 1200,
         height: 630,
-        alt: "Julia Halpin, professional hypnotherapist based in Chorley",
+        alt: "Julia Halpin, Systemic Psychotherapist in Chorley",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "About Julia Halpin | Professional Hypnotherapist in Chorley",
+    title: "About Julia Halpin | Systemic Psychotherapist in Chorley",
     description:
-      "Meet Julia Halpin, a professional hypnotherapist with over 30 years of mental health experience. Specialising in solution-focused Systemic Psychotherapy for anxiety, stress, phobias, and more in Chorley and surrounding areas. Discover how his unique approach combining NHS experience with modern Systemic Psychotherapy techniques can help you achieve lasting positive change.",
+      "Discover Julia Halpin’s background in Systemic Psychotherapy. She supports individuals, families, and couples in Chorley and online, with over 30 years of mental health experience.",
     images: [
-      "https://juliahalpinSystemic Psychotherapy.com/images/julia_alt.jpg",
+      "https://www.familyandcoupletherapyservices.co.uk/images/julia_halpin.jpg",
     ],
   },
   verification: {

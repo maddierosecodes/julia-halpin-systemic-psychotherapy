@@ -10,7 +10,7 @@ import { GiDiploma } from "react-icons/gi";
 import { IoMdMedical } from "react-icons/io";
 import CardDisplay from "../molecules/CardDisplay";
 import { Title } from "../atoms/Title";
-import rockStackImage from "@/public/images/rock_stack.jpg";
+import qualificationsImage from "@/public/images/qualifications.jpg";
 
 export default function Qualifications() {
   const qualificationsAndMemberships = [
@@ -48,16 +48,15 @@ export default function Qualifications() {
     >
       <div className="relative">
         <Image
-          src={rockStackImage}
+          src={qualificationsImage}
           alt="Qualifications"
           className="w-full object-cover aspect-3/2 rounded-xl"
           quality={80}
           loading="lazy"
         />
-        <div className="absolute top-1/2 left-[5%] sm:left-[10%] -translate-y-1/2 text-left max-w-[90%] md:max-w-[60%] bg-black/30 sm:bg-transparent p-3 rounded-lg">
-          <Title size="3xl" smSize="4xl" colour="ivory" weight="bold">
-            Training, <br />
-            Qualifications <br />& Memberships
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center w-[90%] md:w-[80%]  p-3 rounded-lg">
+          <Title size="3xl" smSize="4xl" colour="indigo" weight="bold">
+            Training, Qualifications <br />& Memberships
           </Title>
         </div>
       </div>

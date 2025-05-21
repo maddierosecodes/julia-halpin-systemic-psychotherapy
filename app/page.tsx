@@ -4,21 +4,29 @@ import { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Professional Systemic Psychotherapy in Chorley | Julia Halpin",
+  title: "Family, Couple & Systemic Psychotherapy in Chorley | Julia Halpin",
   description:
-    "Experienced Systemic Psychotherapist in Chorley offering professional therapy services. Specialising in family therapy, relationships, and personal growth through evidence-based systemic approaches.",
+    "Offering professional psychotherapy services in Chorley and online. Julia Halpin is an experienced systemic psychotherapist specialising in family, relationship, and couple therapy.",
   alternates: {
-    canonical: "/",
+    canonical: "https://www.familyandcoupletherapyservices.co.uk/",
   },
-  metadataBase: new URL("https://www.juliahalpin-therapy.co.uk"),
+  metadataBase: new URL("https://www.familyandcoupletherapyservices.co.uk"),
   openGraph: {
-    title: "Professional Systemic Psychotherapy in Chorley | Julia Halpin",
+    title: "Family, Couple & Systemic Psychotherapy in Chorley | Julia Halpin",
     description:
-      "Experienced Systemic Psychotherapist in Chorley offering professional therapy services. Specialising in family therapy, relationships, and personal growth through evidence-based systemic approaches.",
-    url: "https://www.juliahalpin-therapy.co.uk",
-    siteName: "Julia Halpin Systemic Psychotherapy",
+      "Offering professional psychotherapy services in Chorley and online. Julia Halpin is an experienced systemic psychotherapist specialising in family, relationship, and couple therapy.",
+    url: "https://www.familyandcoupletherapyservices.co.uk",
+    siteName: "Family and Couple Therapy Services",
     locale: "en_GB",
     type: "website",
+    images: [
+      {
+        url: "https://www.familyandcoupletherapyservices.co.uk/images/julia_halpin.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Julia Halpin - Systemic Psychotherapist",
+      },
+    ],
   },
   robots: {
     index: true,
@@ -32,14 +40,15 @@ export const metadata: Metadata = {
   },
   authors: [{ name: "Julia Halpin" }],
   creator: "Julia Halpin",
-  publisher: "Julia Halpin Systemic Psychotherapy",
+  publisher: "Family and Couple Therapy Services",
   category: "Health & Wellness",
   keywords: [
     "Systemic Psychotherapy",
     "Family Therapy",
     "Relationship Therapy",
-    "Chorley",
-    "Lancashire",
+    "Couple Therapy",
+    "Psychotherapist Chorley",
+    "Online Therapy UK",
     "Julia Halpin",
   ],
 };
@@ -54,63 +63,98 @@ export default function Home() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "MedicalBusiness",
-            "@id": "https://www.juliahalpin-therapy.co.uk/#business",
-            name: "Julia Halpin Systemic Psychotherapy",
+            "@id": "https://www.familyandcoupletherapyservices.co.uk/#business",
+            name: "Family and Couple Therapy Services",
             description:
-              "Professional Systemic Psychotherapy services in Chorley, Lancashire. Specialising in family therapy, relationship counselling, and personal development through systemic approaches.",
+              "Professional psychotherapy services in Chorley and online. Specialising in family, couple, and relationship therapy, delivered by systemic psychotherapist Julia Halpin.",
             address: {
               "@type": "PostalAddress",
+              streetAddress: "7 St. George's St.",
               addressLocality: "Chorley",
               addressRegion: "Lancashire",
+              postalCode: "PR7 2AA",
               addressCountry: "GB",
-              postalCode: "PR7",
             },
             geo: {
               "@type": "GeoCoordinates",
               latitude: 53.6532,
               longitude: -2.6329,
             },
-            telephone: "+44 1234 567890",
-            email: "contact@juliahalpin-therapy.co.uk",
-            url: "https://www.juliahalpin-therapy.co.uk",
-            sameAs: [
-              "https://www.facebook.com/juliahalpintherapy",
-              "https://www.linkedin.com/in/julia-halpin",
+            telephone: "+44 7538 001 922",
+            email: "julia.halpin@familyandcoupletherapyservices.co.uk",
+            url: "https://www.familyandcoupletherapyservices.co.uk/",
+            openingHoursSpecification: [
+              {
+                "@type": "OpeningHoursSpecification",
+                dayOfWeek: "Wednesday",
+                opens: "17:00",
+                closes: "20:00",
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                dayOfWeek: "Thursday",
+                opens: "17:00",
+                closes: "20:00",
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                dayOfWeek: "Friday",
+                opens: "09:00",
+                closes: "20:00",
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                dayOfWeek: "Saturday",
+                opens: "09:00",
+                closes: "12:00",
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                dayOfWeek: "Sunday",
+                opens: "09:00",
+                closes: "12:00",
+              },
             ],
-            openingHoursSpecification: {
-              "@type": "OpeningHoursSpecification",
-              dayOfWeek: [
-                "Monday",
-                "Tuesday",
-                "Wednesday",
-                "Thursday",
-                "Friday",
-                "Saturday",
-              ],
-              opens: "09:00",
-              closes: "20:00",
-            },
             priceRange: "££",
-            image: "https://www.juliahalpin-therapy.co.uk/images/julia_alt.jpg",
+            image:
+              "https://www.familyandcoupletherapyservices.co.uk/images/julia_halpin.jpg",
             founder: {
               "@type": "Person",
-              "@id": "https://www.juliahalpin-therapy.co.uk/#founder",
+              "@id": "https://www.familyandcoupletherapyservices.co.uk/about",
               name: "Julia Halpin",
               jobTitle: "Systemic Psychotherapist",
               description:
-                "Experienced Systemic Psychotherapist specialising in family therapy and relationship counselling",
+                "Experienced systemic psychotherapist specialising in family, couple, and relationship therapy.",
             },
             accessibilityFeatures: [
               "accessibleParking",
               "wheelchairAccessible",
-              "onlineBooking",
+              "onlineAppointments",
             ],
-            availableService: {
-              "@type": "MedicalTherapy",
-              name: "Systemic Psychotherapy",
-              description:
-                "Professional systemic psychotherapy services including family therapy and relationship counselling",
-            },
+            availableService: [
+              {
+                "@type": "MedicalTherapy",
+                name: "Systemic Psychotherapy",
+                description:
+                  "Psychotherapy using systemic approaches, including work with families, couples, and individuals.",
+              },
+              {
+                "@type": "MedicalTherapy",
+                name: "Family Therapy",
+              },
+              {
+                "@type": "MedicalTherapy",
+                name: "Couple Therapy",
+              },
+              {
+                "@type": "MedicalTherapy",
+                name: "Clinical Supervision",
+              },
+              {
+                "@type": "MedicalTherapy",
+                name: "Consultation",
+              },
+            ],
           }),
         }}
       />

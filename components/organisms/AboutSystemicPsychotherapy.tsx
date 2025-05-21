@@ -44,11 +44,7 @@ export default function AboutSystemicPsychotherapy() {
         <h2 id="about-systemic-psychotherapy-heading" className="sr-only">
           About Systemic Psychotherapy
         </h2>
-        <div className="container mx-auto px-4 mb-8 text-center">
-          <Title size="3xl" colour="rose" weight="bold">
-            Systemic Psychotherapy
-          </Title>
-
+        <div className="container mx-auto px-4 mb-8">
           <div className="relative mb-12 max-w-5xl mx-auto mt-5">
             <div
               className="block min-h-[400px] sm:aspect-[21/8] w-full relative rounded-2xl overflow-hidden"
@@ -56,36 +52,33 @@ export default function AboutSystemicPsychotherapy() {
               aria-label="Growth and transformation concept"
             >
               <Image
-                src="/images/growth_plant.jpg"
+                src="/images/gold_clouds.jpg"
                 alt="Growth and transformation symbolized by a plant - representing personal development through Systemic Psychotherapy"
                 fill
                 className="object-cover"
               />
-              <div className="absolute inset-x-4 top-4 bottom-4 flex items-center justify-center sm:p-0 sm:inset-auto sm:left-8 sm:top-1/2 sm:-translate-y-1/2 sm:max-w-md bg-indigo-900/90 backdrop-blur-sm p-6 rounded-2xl shadow-xl w-auto sm:w-full sm:m-0">
+              <div className="absolute inset-0 bg-indigo-900/20 backdrop-blur-[2px]" />
+              <div className="absolute inset-x-0 top-8 text-center md:bg-gold-900/75 max-w-[80%] mx-auto rounded-2xl">
+                <Title size="4xl" colour="ivory" weight="bold">
+                  What is Systemic Psychotherapy?
+                </Title>
+              </div>
+              <div className="absolute inset-x-4 top-4 bottom-4 flex items-center justify-center md:p-0 md:inset-auto md:left-1/2 md:top-[60%] md:-translate-x-1/2 md:-translate-y-1/2 md:max-w-2xl bg-gold-900/75 backdrop-blur-sm p-8 md:p-10 rounded-2xl shadow-xl w-auto md:w-full md:m-0">
                 <BodyText variant="dark-bg" size="lg" colour="ivory">
                   <strong className="highlight-lavender-dark">
                     Systemic Psychotherapy
                   </strong>{" "}
-                  is a forward-looking approach. Rather than dwelling on the
-                  past, it encourages you to
+                  focuses on relationships — how we communicate, interact, and
+                  influence one another. It sees difficulties not just in
+                  individuals, but in the{" "}
                   <em className="emphasis-text-dark">
-                    {" "}
-                    imagine the future you want
+                    patterns and dynamics between people
                   </em>
-                  , then helps you take steps to get there. The therapist will
-                  ask{" "}
+                  , such as couples or families. Rather than assigning blame, it{" "}
                   <strong className="highlight-lavender-dark">
-                    powerful, goal-oriented questions
+                    creates space for everyone&apos;s voice
                   </strong>{" "}
-                  like: &ldquo;
-                  <em className="emphasis-text-dark">
-                    What would be different if things got better?
-                  </em>
-                  &rdquo; or &ldquo;
-                  <em className="emphasis-text-dark">
-                    How would you know things had changed?
-                  </em>
-                  &rdquo;
+                  to be heard and understood.
                 </BodyText>
               </div>
             </div>
@@ -107,35 +100,29 @@ export default function AboutSystemicPsychotherapy() {
               </div>
             </div>
             <div
-              className="w-full lg:w-[550px] bg-indigo-900/80 backdrop-blur-sm p-4 sm:p-6 rounded-2xl shadow-xl"
+              className="w-full lg:w-[550px] bg-gold-900 backdrop-blur-sm p-4 sm:p-6 rounded-2xl shadow-xl"
               role="article"
               aria-label="Explanation of hypnosis"
             >
               <BodyText variant="dark-bg" size="lg" colour="ivory">
+                Using{" "}
                 <strong className="highlight-text-dark">
-                  Hypnosis helps calm the mind and body
+                  open, reflective questions
                 </strong>
-                , easing anxiety through
+                , systemic therapy helps identify
                 <strong className="highlight-lavender-dark">
                   {" "}
-                  relaxation and visualisation
-                </strong>
-                . In this natural,
-                <em className="emphasis-text-dark"> trance-like state</em>, your
-                brain becomes more open to positive suggestion, making it easier
-                to shift perspective. You remain{" "}
-                <strong className="highlight-text-dark">
-                  fully aware and in control
-                </strong>
-                , but deeply relaxed. This state supports{" "}
-                <strong className="highlight-lavender-dark">
-                  focus on the positives
+                  unhelpful patterns
                 </strong>{" "}
-                in your life and unlocks inner resources, encouraging
+                and explore what new ways of relating might look like. By{" "}
                 <em className="emphasis-text-dark">
-                  {" "}
-                  clarity, confidence, and lasting change
+                  focusing on what&apos;s happening between people — not just
+                  within them
                 </em>
+                , it supports families and couples to move forward together with{" "}
+                <strong className="highlight-text-dark">
+                  more clarity, empathy, and connection
+                </strong>
                 .
               </BodyText>
             </div>

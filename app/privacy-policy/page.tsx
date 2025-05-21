@@ -280,8 +280,8 @@ export default function PrivacyPolicy() {
 
             <BodyText size="lg" variant="light-bg">
               Halpin Therapies Ltd is registered with the UK Information
-              Commissioner&apos;s Office (ICO). Registration number:{" "}
-              <strong>[INSERT ICO NUMBER HERE]</strong>.
+              Commissioner&apos;s Office (ICO). <br />
+              Registration number: <strong>ZB879212</strong>.
             </BodyText>
           </div>
 
@@ -294,11 +294,11 @@ export default function PrivacyPolicy() {
               <br />
               Email:{" "}
               <a
-                href="mailto:julia@lhSystemic Psychotherapy.co.uk"
+                href="mailto:julia.halpin@familyandcoupletherapyservices.co.uk"
                 className="underline"
                 aria-label="Email Julia Halpin"
               >
-                julia@lhSystemic Psychotherapy.co.uk
+                julia.halpin@familyandcoupletherapyservices.co.uk
               </a>
             </BodyText>
           </div>

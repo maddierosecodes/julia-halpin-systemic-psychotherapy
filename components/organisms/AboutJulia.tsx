@@ -4,25 +4,28 @@ import { Subtitle } from "../atoms/Subtitle";
 import { BodyText } from "../atoms/BodyText";
 import { Hero } from "../molecules/Hero";
 import { ProfileImage } from "../atoms/ProfileImage";
+import { CTALink } from "../atoms/CTALink";
 import Link from "next/link";
 import Script from "next/script";
 
 export default function AboutJulia() {
   const heroText = (
     <div
-      className="flex flex-col items-center text-center xl:pr-10"
+      className="flex flex-col items-center text-center xl:pr-10 bg-lavender-50/70 p-6 rounded-lg shadow-md border-3 border-gold lg:max-h-[550px] lg:h-full lg:self-center"
       role="article"
       aria-label="About Julia Halpin"
     >
-      <Title size="4xl" colour="indigo" weight="bold">
-        Julia Halpin
-      </Title>
+      <div className="lg:block hidden">
+        <Title size="4xl" colour="lavender" weight="bold">
+          Julia Halpin
+        </Title>
 
-      <Subtitle size="xl" colour="lavender" weight="medium">
-        Systemic Psychotherapist
-      </Subtitle>
+        <Subtitle size="xl" variant="light-bg" weight="medium">
+          Systemic Psychotherapist
+        </Subtitle>
+      </div>
 
-      <span className="max-w-3xl my-4 sm:my-8 text-base sm:text-lg text-ink-500">
+      <span className="max-w-3xl lg:max-w-2xl my-4 sm:my-6 text-base sm:text-lg text-ink-500 lg:overflow-y-auto lg:pr-4 [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-indigo-800 [&::-webkit-scrollbar-thumb]:bg-lavender-300 [&::-webkit-scrollbar-thumb]:rounded-full [scrollbar-width:thin] [scrollbar-color:rgb(225,218,248)_rgb(35,35,67)]">
         <BodyText size="lg">
           I&apos;m Julia, a{" "}
           <span className="highlight-indigo">
@@ -75,18 +78,28 @@ export default function AboutJulia() {
     </div>
   );
 
+  const ctaButton = (
+    <CTALink href="/contact?enquiry=general" variant="default-centered" darkBg>
+      Get in touch
+    </CTALink>
+  );
+
   const heroImage = (
-    <div
-      className="w-full max-w-[280px] sm:max-w-md mx-auto aspect-square"
-      role="img"
-      aria-label="Julia Halpin's profile image"
-    >
-      <ProfileImage
-        src="/images/julia_halpin.jpg"
-        alt="Julia Halpin, a professional hypnotherapist based in Chorley"
-        shape="circle"
-        priority={true}
-      />
+    <div className="flex flex-col items-center gap-6">
+      <div
+        className="w-full max-w-[280px] sm:max-w-md mx-auto aspect-square p-4 lg:self-center"
+        role="img"
+        aria-label="Julia Halpin's profile image"
+      >
+        <ProfileImage
+          src="/images/julia_halpin.jpg"
+          alt="Julia Halpin, a professional hypnotherapist based in Chorley"
+          shape="circle"
+          priority={true}
+          border
+        />
+      </div>
+      {ctaButton}
     </div>
   );
 
@@ -128,17 +141,28 @@ export default function AboutJulia() {
       />
       <section
         id="about-julia"
-        className="mt-4 sm:mt-15 flex flex-col items-center justify-center px-4"
+        className="mt-4 lg:mt-10 flex flex-col items-center justify-center px-4"
         aria-labelledby="about-julia-heading"
       >
         <h2 id="about-julia-heading" className="sr-only">
           About Julia Halpin
         </h2>
-        <Hero
-          imageComponent={heroImage}
-          textComponent={heroText}
-          imagePosition="left"
-        />
+        <div className="w-full max-w-7xl bg-indigo-500/75 border-3 border-gold rounded-xl p-6 sm:p-8 shadow-xl">
+          <div className="flex flex-col items-center text-center lg:hidden">
+            <Title size="5xl" colour="lavender-light" weight="bold">
+              Julia Halpin
+            </Title>
+
+            <Subtitle size="2xl" variant="dark-bg" weight="medium">
+              Systemic Psychotherapist
+            </Subtitle>
+          </div>
+          <Hero
+            imageComponent={heroImage}
+            textComponent={heroText}
+            imagePosition="left"
+          />
+        </div>
       </section>
     </>
   );
