@@ -17,7 +17,7 @@ export default function TabButton({
     >
       <button
         onClick={onClick}
-        className="tab-label"
+        className="tab-label hover:cursor-pointer"
         role="tab"
         aria-selected={isActive}
         aria-controls={`panel-${tabId}`}

@@ -43,7 +43,7 @@ export default function ServiceLayout({
       aria-labelledby={`${title.toLowerCase()}-heading`}
     >
       {/* Flip Card for Mobile and Tablet */}
-      <div className="block lg:hidden w-full">
+      <div className="block lg:hidden w-full md:w-3/4 md:mx-auto">
         <div
           className="relative w-full h-full cursor-pointer"
           style={{ perspective: "2000px" }}
@@ -66,7 +66,7 @@ export default function ServiceLayout({
               <Image
                 src={image}
                 alt={imageAlt}
-                className={`w-full aspect-[${imageAspectRatio}] object-cover`}
+                className={`w-full aspect-[${imageAspectRatio}] object-cover md:rounded-xl`}
                 quality={80}
                 placeholder="blur"
                 blurDataURL={BLUR_DATA_URL}
@@ -173,13 +173,18 @@ export default function ServiceLayout({
               >
                 {children}
               </BodyText>
+              <div className="w-full text-center mt-4 hidden xl:block">
+                <CTALink href={`/contact?type=${contactType}`} darkBg>
+                  Explore {title}
+                </CTALink>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
       {/* CTA Button - Outside the content box */}
-      <div className="w-full text-center mt-4">
+      <div className="w-full text-center mt-4 xl:hidden">
         <CTALink href={`/contact?type=${contactType}`} darkBg>
           Explore {title}
         </CTALink>

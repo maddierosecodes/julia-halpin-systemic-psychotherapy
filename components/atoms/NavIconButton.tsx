@@ -11,10 +11,12 @@ export default function NavIconButton({
   return (
     <button
       onClick={onClick}
-      className={isLeft ? "nav-button-left" : "nav-button-right"}
+      className={`${
+        isLeft ? "nav-button-left" : "nav-button-right"
+      } hover:cursor-pointer`}
       aria-label={ariaLabel}
     >
-      {isLeft ? <BsChevronLeft size={24} /> : <BsChevronRight size={24} />}
+      {isLeft ? <BsChevronLeft size={35} /> : <BsChevronRight size={35} />}
     </button>
   );
 }

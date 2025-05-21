@@ -54,7 +54,7 @@ export const BurgerMenu = ({ links }: BurgerMenuProps) => {
       </button>
 
       {isOpen && (
-        <div className="fixed inset-0 bg-rose-800 z-[100]">
+        <div className="fixed inset-0 bg-ink-800 z-[100]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
             <div className="flex justify-end pt-4">
               <button

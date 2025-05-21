@@ -26,10 +26,10 @@ export default function SessionsAndFees() {
   return (
     <section
       id="sessionAndFees"
-      className="flex flex-col justify-center items-center gap-3 mx-auto px-4 sm:px-6 md:px-2 xl:px-0 max-w-7xl mb-8 mt-4"
+      className="flex flex-col justify-center items-center gap-3 mx-auto px-4 sm:px-6 md:px-8 xl:px-0 max-w-7xl mb-8 mt-4"
       aria-labelledby="sessions-and-fees-heading"
     >
-      <div className="text-center mb-8">
+      <div className="text-center mb-8 w-full">
         <Title
           size="4xl"
           smSize="5xl"
@@ -42,11 +42,11 @@ export default function SessionsAndFees() {
       </div>
 
       {/* Main container with responsive layout */}
-      <div className="flex flex-col lg:flex-row gap-8">
+      <div className="flex flex-col lg:flex-row gap-8 w-full">
         {/* Left Column (3/5 width on desktop) */}
-        <div className="lg:w-3/5 space-y-6 order-2 lg:order-1">
+        <div className="w-full lg:w-3/5 space-y-6 order-2 lg:order-1">
           {/* Availability Box */}
-          <div className="bg-indigo-700 rounded-2xl shadow-xl p-5">
+          <div className="bg-indigo-700 rounded-2xl shadow-xl p-4 sm:p-5">
             <Subtitle variant="dark-bg" size="3xl" colour="ivory" weight="bold">
               Availability
             </Subtitle>

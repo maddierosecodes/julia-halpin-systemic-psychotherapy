@@ -61,9 +61,9 @@ export const ContactForm = () => {
   };
 
   const inputStyles =
-    "block w-full rounded-md border-lavender-200 shadow-sm focus:border-lavender-300 focus:ring-lavender-300 text-ivory-50 bg-rose-600/30 font-main placeholder-indigo-200 text-lg px-4";
+    "block w-full rounded-md border-lavender-200 shadow-sm focus:border-lavender-300 focus:ring-lavender-300 text-ivory-50 bg-gold-600/50 font-main placeholder-indigo-50 text-lg px-4";
   const labelStyles = "block font-secondary text-ivory-50 text-lg";
-  const helperTextStyles = "ml-2 text-lavender-300";
+  const helperTextStyles = "ml-2 text-ivory-50";
 
   return (
     <div className="w-full max-w-4xl mx-auto p-4 bg-indigo-900/80 backdrop-blur-sm rounded-2xl shadow-xl my-8">
@@ -164,24 +164,24 @@ export const ContactForm = () => {
             }
           >
             <option
-              className="bg-rose-700 text-ivory-50"
+              className="bg-gold-700 text-ivory-50"
               value="family-therapy"
             >
               Family Therapy
             </option>
             <option
-              className="bg-rose-700 text-ivory-50"
+              className="bg-gold-700 text-ivory-50"
               value="couple-therapy"
             >
               Couple Therapy
             </option>
-            <option className="bg-rose-700 text-ivory-50" value="supervision">
+            <option className="bg-gold-700 text-ivory-50" value="supervision">
               Supervision
             </option>
-            <option className="bg-rose-700 text-ivory-50" value="consultation">
+            <option className="bg-gold-700 text-ivory-50" value="consultation">
               MSc Student Consultation
             </option>
-            <option className="bg-rose-700 text-ivory-50" value="general">
+            <option className="bg-gold-700 text-ivory-50" value="general">
               General Enquiry
             </option>
           </select>

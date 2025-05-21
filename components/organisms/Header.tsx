@@ -47,28 +47,31 @@ export const Header = () => {
       className="fixed top-0 left-0 right-0 z-50 w-full bg-lavender-200 border-b-2 border-gold-500"
       role="banner"
     >
-      <div className="w-full py-4 lg:py-2">
+      <div className="w-full py-2 sm:py-3 lg:py-2">
         <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
             {/* Title and subtitle group */}
             <Link
               href="/"
-              className="flex flex-col items-center text-center w-[400px] lg:w-[300px]"
+              className="flex flex-col items-center text-center w-[280px] sm:w-[320px] lg:w-[300px]"
               aria-label="Julia Halpin Hypnotherapist - Home"
             >
               <Title
-                size="4xl"
-                smSize="5xl"
+                size="3xl"
+                smSize="4xl"
                 lgSize="3xl"
                 colour="indigo"
                 weight="bold"
+                className="leading-tight"
               >
                 Family & Couple <br />
-                <span className="text-4xl lg:text-2xl">Therapy Services</span>
+                <span className="text-2xl sm:text-3xl lg:text-2xl">
+                  Therapy Services
+                </span>
               </Title>
               <Subtitle
-                size="lg"
-                smSize="xl"
+                size="md"
+                smSize="lg"
                 lgSize="md"
                 colour="lavender"
                 weight="medium"
