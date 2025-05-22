@@ -11,7 +11,7 @@ import Script from "next/script";
 export default function AboutJulia() {
   const heroText = (
     <div
-      className="flex flex-col items-center text-center xl:pr-10 bg-lavender-50/70 p-6 rounded-lg shadow-md border-3 border-gold lg:max-h-[550px] lg:h-full lg:self-center"
+      className="flex flex-col items-center text-center p-3 xl:pr-10 bg-lavender-50/70 rounded-lg shadow-md border-3 border-gold lg:max-h-[550px] lg:h-full lg:self-center"
       role="article"
       aria-label="About Julia Halpin"
     >
@@ -25,7 +25,7 @@ export default function AboutJulia() {
         </Subtitle>
       </div>
 
-      <span className="max-w-3xl lg:max-w-2xl my-4 sm:my-6 text-base sm:text-lg text-ink-500 lg:overflow-y-auto lg:pr-4 [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-indigo-800 [&::-webkit-scrollbar-thumb]:bg-lavender-300 [&::-webkit-scrollbar-thumb]:rounded-full [scrollbar-width:thin] [scrollbar-color:rgb(225,218,248)_rgb(35,35,67)]">
+      <div className="w-full lg:max-w-2xl my-4 sm:my-6 text-base sm:text-lg text-ink-500 lg:overflow-y-auto lg:pr-4 [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-indigo-800 [&::-webkit-scrollbar-thumb]:bg-lavender-300 [&::-webkit-scrollbar-thumb]:rounded-full [scrollbar-width:thin] [scrollbar-color:rgb(225,218,248)_rgb(35,35,67)]">
         <BodyText size="lg">
           I&apos;m Julia, a{" "}
           <span className="highlight-indigo">
@@ -74,7 +74,7 @@ export default function AboutJulia() {
             to discuss how I can support you.
           </span>
         </BodyText>
-      </span>
+      </div>
     </div>
   );
 
@@ -147,7 +147,7 @@ export default function AboutJulia() {
         <h2 id="about-julia-heading" className="sr-only">
           About Julia Halpin
         </h2>
-        <div className="w-full max-w-7xl bg-indigo-500/75 border-3 border-gold rounded-xl p-6 sm:p-8 shadow-xl">
+        <div className="w-full max-w-7xl bg-indigo-500/75 border-3 border-gold rounded-xl sm:p-8 shadow-xl">
           <div className="flex flex-col items-center text-center lg:hidden">
             <Title size="5xl" colour="lavender-light" weight="bold">
               Julia Halpin

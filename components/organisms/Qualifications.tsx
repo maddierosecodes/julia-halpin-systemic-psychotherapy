@@ -1,13 +1,9 @@
 import React from "react";
 import Image from "next/image";
-import {
-  FaUserGraduate,
-  FaUserTie,
-  FaHandHoldingMedical,
-} from "react-icons/fa";
+import { FaUserGraduate, FaHandHoldingMedical } from "react-icons/fa";
 import { MdSupervisorAccount } from "react-icons/md";
-import { GiDiploma } from "react-icons/gi";
-import { IoMdMedical } from "react-icons/io";
+import PSAImage from "@/public/images/psa.png";
+import UKCPImage from "@/public/images/UKCP.webp";
 import CardDisplay from "../molecules/CardDisplay";
 import { Title } from "../atoms/Title";
 import qualificationsImage from "@/public/images/qualifications.jpg";
@@ -24,11 +20,11 @@ export default function Qualifications() {
     },
     {
       title: "Member of The United Kingdom Council for Psychotherapy (UKCP)",
-      icon: <GiDiploma className="w-10 h-10" />,
+      icon: <Image src={UKCPImage} alt="UKCP" className="w-18 h-10" />,
     },
     {
       title: "Member of The Association for Family Therapy (AFT)",
-      icon: <FaUserTie className="w-10 h-10" />,
+      icon: <MdSupervisorAccount className="w-10 h-10" />,
     },
     {
       title: "Member of the Nursing & Midwifery Council (NMC)",
@@ -36,7 +32,7 @@ export default function Qualifications() {
     },
     {
       title: "Member of The Professional Standards Authority",
-      icon: <IoMdMedical className="w-10 h-10" />,
+      icon: <Image src={PSAImage} alt="PSA" className="w-20 h-10" />,
     },
   ];
 

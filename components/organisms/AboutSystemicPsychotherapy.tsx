@@ -63,7 +63,7 @@ export default function AboutSystemicPsychotherapy() {
                   What is Systemic Psychotherapy?
                 </Title>
               </div>
-              <div className="absolute inset-x-4 top-4 bottom-4 flex items-center justify-center md:p-0 md:inset-auto md:left-1/2 md:top-[60%] md:-translate-x-1/2 md:-translate-y-1/2 md:max-w-2xl bg-gold-900/75 backdrop-blur-sm p-8 md:p-10 rounded-2xl shadow-xl w-auto md:w-full md:m-0">
+              <div className="absolute inset-x-4 top-4 bottom-4 flex items-center justify-center md:inset-auto md:left-1/2 md:top-[60%] md:-translate-x-1/2 md:-translate-y-1/2 md:max-w-2xl bg-gold-900/75 backdrop-blur-sm px-4 md:p-10 rounded-2xl shadow-xl w-auto md:w-full md:m-0">
                 <BodyText variant="dark-bg" size="lg" colour="ivory">
                   <strong className="highlight-lavender-dark">
                     Systemic Psychotherapy
@@ -92,7 +92,7 @@ export default function AboutSystemicPsychotherapy() {
             >
               <div className="aspect-[5/3] relative w-full h-full">
                 <Image
-                  src="/images/butterfly_brain.jpg"
+                  src="/images/gold_steps.jpg"
                   alt="Butterfly brain transformation concept - representing the positive changes possible through Systemic Psychotherapy"
                   fill
                   className="object-cover object-bottom"

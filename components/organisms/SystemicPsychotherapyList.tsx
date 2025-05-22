@@ -7,8 +7,8 @@ import {
   FaSadTear,
   FaUserCheck,
   FaBriefcase,
-  FaRegHandPeace,
-  FaBandAid,
+  FaChalkboardTeacher,
+  FaUserGraduate,
   FaStethoscope,
 } from "react-icons/fa";
 import {
@@ -26,84 +26,85 @@ import Script from "next/script";
 
 const treatmentAreas = [
   {
-    name: "Anxiety and panic attacks",
-    icon: <MdOutlinePsychology className="w-8 h-8" aria-hidden="true" />,
-    href: "services#supportOffered",
-  },
-  {
-    name: "Depression and low mood",
-    icon: <TbMoodSad className="w-8 h-8" aria-hidden="true" />,
-    href: "services#supportOffered",
-  },
-  {
-    name: "Self-harm",
-    icon: <FaBandAid className="w-8 h-8" aria-hidden="true" />,
-    href: "services#supportOffered",
-  },
-  {
     name: "Family conflict",
     icon: <MdFamilyRestroom className="w-8 h-8" aria-hidden="true" />,
-    href: "services#supportOffered",
+    href: "services?service=family-therapy",
   },
   {
     name: "Couple and relationship difficulties",
     icon: <FaHandHoldingHeart className="w-8 h-8" aria-hidden="true" />,
-    href: "services#supportOffered",
-  },
-  {
-    name: "Communication challenges",
-    icon: <FaComments className="w-8 h-8" aria-hidden="true" />,
-    href: "services#supportOffered",
-  },
-  {
-    name: "Neurodiversity (Autism and ADHD)",
-    icon: <FaBrain className="w-8 h-8" aria-hidden="true" />,
-    href: "services#supportOffered",
-  },
-  {
-    name: "Parenting and behaviour concerns",
-    icon: <FaChild className="w-8 h-8" aria-hidden="true" />,
-    href: "services#supportOffered",
+    href: "services?service=couple-therapy",
   },
   {
     name: "Separation and divorce",
     icon: <GiBreakingChain className="w-8 h-8" aria-hidden="true" />,
-    href: "services#supportOffered",
+    href: "services?service=family-therapy",
   },
+  {
+    name: "Parenting and behaviour concerns",
+    icon: <FaChild className="w-8 h-8" aria-hidden="true" />,
+    href: "services?service=family-therapy",
+  },
+  {
+    name: "Communication challenges",
+    icon: <FaComments className="w-8 h-8" aria-hidden="true" />,
+    href: "services?service=couple-therapy",
+  },
+  {
+    name: "MSc Consultation",
+    icon: <FaChalkboardTeacher className="w-8 h-8" aria-hidden="true" />,
+    href: "services?service=consultation",
+  },
+  {
+    name: "Clinical Supervision",
+    icon: <FaUserGraduate className="w-8 h-8" aria-hidden="true" />,
+    href: "services?service=supervision",
+  },
+
   {
     name: "Bereavement and grief",
     icon: <FaSadTear className="w-8 h-8" aria-hidden="true" />,
-    href: "services#supportOffered",
+    href: "services?service=family-therapy",
   },
   {
-    name: "Low self-esteem and confidence",
-    icon: <FaUserCheck className="w-8 h-8" aria-hidden="true" />,
-    href: "services#supportOffered",
+    name: "Anxiety and panic attacks",
+    icon: <MdOutlinePsychology className="w-8 h-8" aria-hidden="true" />,
+    href: "services?service=couple-therapy",
   },
   {
-    name: "Stress (including work-related stress)",
-    icon: <FaBriefcase className="w-8 h-8" aria-hidden="true" />,
-    href: "services#supportOffered",
+    name: "Depression and low mood",
+    icon: <TbMoodSad className="w-8 h-8" aria-hidden="true" />,
+    href: "services?service=couple-therapy",
+  },
+  {
+    name: "Neurodiversity (Autism and ADHD)",
+    icon: <FaBrain className="w-8 h-8" aria-hidden="true" />,
+    href: "services?service=family-therapy",
   },
   {
     name: "Social anxiety",
     icon: <MdSocialDistance className="w-8 h-8" aria-hidden="true" />,
-    href: "services#supportOffered",
-  },
-  {
-    name: "Emotional regulation difficulties",
-    icon: <FaRegHandPeace className="w-8 h-8" aria-hidden="true" />,
-    href: "services#supportOffered",
+    href: "services?service=couple-therapy",
   },
   {
     name: "Trauma and difficult life events",
     icon: <FaHeart className="w-8 h-8" aria-hidden="true" />,
-    href: "services#supportOffered",
+    href: "services?service=family-therapy",
   },
   {
     name: "Mental health conditions",
     icon: <FaStethoscope className="w-8 h-8" aria-hidden="true" />,
-    href: "services#supportOffered",
+    href: "services?service=family-therapy",
+  },
+  {
+    name: "Work-related stress",
+    icon: <FaBriefcase className="w-8 h-8" aria-hidden="true" />,
+    href: "services?service=couple-therapy",
+  },
+  {
+    name: "Self-esteem and confidence",
+    icon: <FaUserCheck className="w-8 h-8" aria-hidden="true" />,
+    href: "services?service=couple-therapy",
   },
 ];
 
@@ -133,7 +134,7 @@ export default function SystemicPsychotherapyList() {
         }}
       />
       <section
-        id="support-offered"
+        id="supportOffered"
         className="flex flex-col items-center justify-center text-center mx-auto px-4 max-w-7xl mb-10 mt-10"
         aria-labelledby="support-offered-heading"
       >
@@ -141,7 +142,7 @@ export default function SystemicPsychotherapyList() {
           Support Offered
         </h2>
         <Title size="3xl" colour="rose" weight="bold">
-          Systemic Psychotherapy can help you with:
+          I can offer support for many issues, including:
         </Title>
 
         <nav aria-label="Treatment areas navigation">
