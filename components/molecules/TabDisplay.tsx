@@ -72,7 +72,7 @@ export default function TabDisplay({
   return (
     <div
       id="services"
-      className="relative mt-5 lg:mt-0 w-full bg-lavender-700/20 border-2 border-lavender-700 rounded-lg mx-0"
+      className="relative mt-5 lg:mt-0 w-full bg-lavender-900/20 border-2 border-lavender-900 rounded-lg mx-0"
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
@@ -88,10 +88,10 @@ export default function TabDisplay({
         </div>
         {/* Mobile Title Display */}
         <div className="block md:hidden px-4 py-3 text-center">
-          <h2 className="text-2xl font-medium text-lavender-800">
+          <h2 className="text-2xl font-medium text-lavender-900">
             {tabs[currentIndex].label}
           </h2>
-          <div className="text-sm text-lavender-600 mt-1">
+          <div className="text-sm text-lavender-900 mt-1">
             Swipe to view more services
           </div>
         </div>

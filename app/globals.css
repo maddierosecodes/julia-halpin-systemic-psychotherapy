@@ -97,44 +97,56 @@
 @layer components {
   /* Classes for light backgrounds */
   .highlight-lavender {
-    color: var(--color-lavender-800);
-    font-weight: 600;
+    color: var(--color-lavender-900);
+    font-weight: 700;
   }
 
   .highlight-indigo {
-    color: var(--color-indigo-700);
-    font-weight: 600;
+    color: var(--color-indigo-900);
+    font-weight: 700;
   }
 
   .emphasis-text {
-    color: var(--color-rose-600);
+    color: var(--color-rose-900);
     font-style: italic;
+    font-weight: 600;
   }
 
   .highlight-text {
-    color: var(--color-rose-600);
-    font-weight: 600;
+    color: var(--color-rose-900);
+    font-weight: 700;
   }
 
   /* Classes for dark backgrounds */
   .highlight-lavender-dark {
-    color: var(--color-lavender-300);
+    color: var(--color-ivory-50);
     font-weight: 700;
   }
 
   .highlight-indigo-dark {
-    color: var(--color-lavender-100);
-    font-weight: 600;
+    color: var(--color-ivory-50);
+    font-weight: 700;
   }
 
   .emphasis-text-dark {
-    color: var(--color-indigo-100);
+    color: var(--color-ivory-50);
     font-style: italic;
+    font-weight: 600;
   }
 
   .highlight-text-dark {
-    color: var(--color-ivory-100);
+    color: var(--color-ivory-50);
     font-weight: 700;
+  }
+
+  /* Base text colors for headings */
+  h1.text-rose-500 {
+    color: var(--color-rose-900);
+  }
+
+  /* Card text colors */
+  .bg-lavender-300 h1.text-rose-500 {
+    color: var(--color-rose-900);
   }
 
   /* Tab Display Component Styles */

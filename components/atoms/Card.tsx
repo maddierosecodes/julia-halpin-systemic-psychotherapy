@@ -18,7 +18,7 @@ export default function Card({ title, icon }: CardProps) {
       <Title
         size="sm"
         smSize="md"
-        colour="rose"
+        colour="rose-dark"
         weight="medium"
         truncate="3-lines"
       >
