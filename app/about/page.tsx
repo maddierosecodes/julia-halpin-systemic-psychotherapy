@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "About Julia Halpin | Systemic Psychotherapist in Chorley",
     description:
-      "Discover Julia Halpin’s background in Systemic Psychotherapy. She supports individuals, families, and couples in Chorley and online, with over 30 years of mental health experience.",
+      "Discover Julia Halpin's background in Systemic Psychotherapy. She supports individuals, families, and couples in Chorley and online, with over 30 years of mental health experience.",
     images: [
       "https://www.familyandcoupletherapyservices.co.uk/images/julia_halpin.jpg",
     ],
@@ -75,7 +75,6 @@ export default function About() {
   return (
     <main
       className="mt-6 md:mt-10"
-      role="main"
       aria-label="About Julia Halpin Systemic Psychotherapy"
     >
       <SectionWrapper>

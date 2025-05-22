@@ -54,7 +54,7 @@ export const Header = () => {
             <Link
               href="/"
               className="flex flex-col items-center text-center w-[280px] sm:w-[320px] lg:w-[300px]"
-              aria-label="Julia Halpin Hypnotherapist - Home"
+              aria-label="Julia Halpin Systemic Psychotherapist - Home"
             >
               <Title
                 size="3xl"

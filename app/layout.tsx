@@ -5,42 +5,63 @@ import { Footer } from "@/components/organisms/Footer";
 
 export const metadata: Metadata = {
   title: {
-    default: "Systemic Psychotherapy in Chorley | Julia Halpin",
-    template: "%s | Systemic Psychotherapy in Chorley | Julia Halpin",
+    default:
+      "Systemic Psychotherapy in Chorley | Family and Couple Therapy Services",
+    template:
+      "%s | Systemic Psychotherapy in Chorley | Family and Couple Therapy Services",
   },
   description:
-    "Julia Halpin is a qualified hypnotherapist based in Chorley, offering compassionate, effective Systemic Psychotherapy services for anxiety, stress, weight loss, and more.",
+    "Julia Halpin is a Systemic Psychotherapist based in Chorley, offering compassionate, evidence-based therapy for individuals, couples, and families. Online and in-person sessions available.",
   keywords: [
     "Systemic Psychotherapy Chorley",
+    "family therapy",
+    "couple therapy",
     "Julia Halpin",
-    "Chorley hypnotherapist",
-    "anxiety Systemic Psychotherapy",
-    "smoking cessation Chorley",
-    "stress management",
-    "hypnosis therapy Chorley",
-    "wellbeing",
-    "mental health support",
+    "mental health support Lancashire",
+    "relationship counselling",
+    "therapy for anxiety",
+    "neurodiversity support",
+    "Chorley psychotherapy",
   ],
   authors: [{ name: "Julia Halpin" }],
   creator: "Julia Halpin",
-  publisher: "Julia Halpin Systemic Psychotherapy",
+  publisher: "Family and Couple Therapy Services",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://www.lhSystemicPsychotherapy.co.uk/"),
+  metadataBase: new URL("https://www.familyandcoupletherapyservices.co.uk"),
   alternates: {
-    canonical: "/",
+    canonical: "https://www.familyandcoupletherapyservices.co.uk/",
   },
   openGraph: {
-    title: "Systemic Psychotherapy in Chorley | Julia Halpin",
+    title:
+      "Systemic Psychotherapy in Chorley | Family and Couple Therapy Services",
     description:
-      "Looking for Systemic Psychotherapy in Chorley? Julia Halpin offers personalised sessions to help with anxiety, weight loss, smoking cessation and more.",
-    url: "https://www.lhSystemic Psychotherapy.co.uk/",
-    siteName: "Julia Halpin Systemic Psychotherapy",
+      "Looking for family, couple, or individual therapy in Chorley? Julia Halpin offers evidence-based Systemic Psychotherapy both in-person and online.",
+    url: "https://www.familyandcoupletherapyservices.co.uk/",
+    siteName: "Family and Couple Therapy Services",
     locale: "en_GB",
     type: "website",
+    images: [
+      {
+        url: "https://www.familyandcoupletherapyservices.co.uk/images/julia_halpin.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Julia Halpin, Systemic Psychotherapist in Chorley",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "Systemic Psychotherapy in Chorley | Family and Couple Therapy Services",
+    description:
+      "Professional therapy services for individuals, couples, and families in Chorley. Run by Julia Halpin, a qualified Systemic Psychotherapist with NHS experience.",
+    images: [
+      "https://www.familyandcoupletherapyservices.co.uk/images/julia_halpin.jpg",
+    ],
   },
   robots: {
     index: true,
@@ -54,7 +75,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "google-site-verification-code", // Replace with your real code
+    google: "google-site-verification-code", // Replace with real code
   },
 };
 
@@ -66,6 +87,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="flex flex-col min-h-screen w-full">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:p-3 focus:bg-lavender-200 focus:text-indigo-900 focus:outline-none focus:ring-2 focus:ring-lavender-500"
+        >
+          Skip to main content
+        </a>
         <Header />
         <main
           className="flex-grow bg-lavender-100 pt-24 sm:pt-28 lg:pt-20 w-full overflow-x-hidden px-0 sm:px-4 md:px-6 lg:px-15"

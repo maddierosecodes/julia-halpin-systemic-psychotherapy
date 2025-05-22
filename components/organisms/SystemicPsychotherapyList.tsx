@@ -118,18 +118,112 @@ export default function SystemicPsychotherapyList() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "MedicalBusiness",
-            name: "Julia Halpin Systemic Psychotherapy",
+            name: "Family and Couple Therapy Services",
+            url: "https://www.familyandcoupletherapyservices.co.uk/services#supportOffered",
             description:
-              "Professional Systemic Psychotherapy services offering treatment for various conditions including anxiety, stress, phobias, and more.",
+              "Systemic Psychotherapy services in Chorley supporting individuals, couples, and families with a wide range of emotional and relational challenges.",
             medicalSpecialty: {
               "@type": "MedicalSpecialty",
               name: "Mental Health",
             },
-            availableService: treatmentAreas.map((area) => ({
-              "@type": "MedicalTherapy",
-              name: area.name,
-              description: `Professional Systemic Psychotherapy treatment for ${area.name.toLowerCase()}`,
-            })),
+            availableService: [
+              {
+                "@type": "MedicalTherapy",
+                name: "Anxiety and Panic Attacks",
+                description:
+                  "Therapeutic support for managing anxiety, panic, and overwhelm.",
+              },
+              {
+                "@type": "MedicalTherapy",
+                name: "Depression and Low Mood",
+                description:
+                  "Systemic therapy for emotional regulation and low mood.",
+              },
+              {
+                "@type": "MedicalTherapy",
+                name: "Self-Harm",
+                description:
+                  "Support for individuals struggling with self-harm and emotional distress.",
+              },
+              {
+                "@type": "MedicalTherapy",
+                name: "Family Conflict",
+                description:
+                  "Systemic approaches to managing tension and improving communication in families.",
+              },
+              {
+                "@type": "MedicalTherapy",
+                name: "Couple and Relationship Difficulties",
+                description:
+                  "Therapy to improve connection, communication, and resolve relational issues.",
+              },
+              {
+                "@type": "MedicalTherapy",
+                name: "Communication Challenges",
+                description:
+                  "Support for individuals and families experiencing communication difficulties.",
+              },
+              {
+                "@type": "MedicalTherapy",
+                name: "Neurodiversity (Autism and ADHD)",
+                description:
+                  "Understanding and supporting neurodivergent individuals within relational systems.",
+              },
+              {
+                "@type": "MedicalTherapy",
+                name: "Parenting and Behaviour Concerns",
+                description:
+                  "Guidance and support for parents managing behavioural or developmental concerns.",
+              },
+              {
+                "@type": "MedicalTherapy",
+                name: "Separation and Divorce",
+                description:
+                  "Support for families and couples navigating separation and its emotional impact.",
+              },
+              {
+                "@type": "MedicalTherapy",
+                name: "Bereavement and Grief",
+                description:
+                  "Therapy for individuals and families processing loss and grief.",
+              },
+              {
+                "@type": "MedicalTherapy",
+                name: "Low Self-Esteem and Confidence",
+                description:
+                  "Support to build self-worth and foster personal growth.",
+              },
+              {
+                "@type": "MedicalTherapy",
+                name: "Stress (including Work-Related Stress)",
+                description:
+                  "Helping clients manage stress and find sustainable coping strategies.",
+              },
+              {
+                "@type": "MedicalTherapy",
+                name: "Social Anxiety",
+                description:
+                  "Systemic support for those struggling with social fear or avoidance.",
+              },
+              {
+                "@type": "MedicalTherapy",
+                name: "Emotional Regulation Difficulties",
+                description:
+                  "Helping individuals improve emotional awareness and response.",
+              },
+              {
+                "@type": "MedicalTherapy",
+                name: "Trauma and Difficult Life Events",
+                description:
+                  "Therapy for processing trauma and building resilience.",
+              },
+              {
+                "@type": "MedicalTherapy",
+                name: "Mental Health Conditions",
+                description:
+                  "Relational therapy for individuals living with diagnosed mental health conditions.",
+              },
+            ],
           }),
         }}
       />

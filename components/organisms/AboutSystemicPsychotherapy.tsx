@@ -8,30 +8,33 @@ export default function AboutSystemicPsychotherapy() {
   return (
     <>
       <Script
-        id="solution-focused-Systemic Psychotherapy-schema"
+        id="systemic-psychotherapy-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "MedicalTherapy",
-            name: " Systemic Psychotherapy",
+            name: "Systemic Psychotherapy",
+            url: "https://www.familyandcoupletherapyservices.co.uk/about#aboutSystemicPsychotherapy",
             description:
-              "A forward-looking approach to therapy that helps individuals imagine and work towards their desired future through goal-oriented questions and positive suggestion.",
+              "Systemic Psychotherapy is a relational approach to mental health treatment that focuses on understanding patterns within families and relationships. It supports individuals, couples, and families in making meaningful changes through collaborative dialogue.",
+            therapyType: "Systemic",
             medicalSpecialty: {
               "@type": "MedicalSpecialty",
               name: "Mental Health",
             },
             relevantSpecialty: [
-              "Anxiety Treatment",
-              "Stress Management",
-              "Phobia Treatment",
-              "Stop Smoking",
-              "Mental Health",
+              "Anxiety",
+              "Stress",
+              "Relationship Issues",
+              "Communication Difficulties",
+              "Family Conflict",
+              "Neurodiversity Support",
             ],
             recognizingAuthority: [
-              "National Council for Systemic Psychotherapy",
-              "Association for  Systemic Psychotherapy",
-              "Complementary & Natural Healthcare Council",
+              "UK Council for Psychotherapy (UKCP)",
+              "Association for Family Therapy and Systemic Practice (AFT)",
+              "British Association for Counselling and Psychotherapy (BACP)",
             ],
           }),
         }}
@@ -48,7 +51,6 @@ export default function AboutSystemicPsychotherapy() {
           <div className="relative mb-12 max-w-5xl mx-auto mt-5">
             <div
               className="block min-h-[400px] sm:aspect-[21/8] w-full relative rounded-2xl overflow-hidden"
-              role="img"
               aria-label="Growth and transformation concept"
             >
               <Image
@@ -57,7 +59,10 @@ export default function AboutSystemicPsychotherapy() {
                 fill
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-indigo-900/20 backdrop-blur-[2px]" />
+              <div
+                className="absolute inset-0 bg-indigo-900/20 backdrop-blur-[2px]"
+                aria-hidden="true"
+              />
               <div className="absolute inset-x-0 top-8 text-center md:bg-gold-900/75 max-w-[80%] mx-auto rounded-2xl">
                 <Title size="4xl" colour="ivory" weight="bold">
                   What is Systemic Psychotherapy?
@@ -87,7 +92,6 @@ export default function AboutSystemicPsychotherapy() {
           <div className="relative mb-12 max-w-5xl mx-auto flex flex-col lg:flex-row gap-4 lg:gap-8 items-center lg:items-start justify-center">
             <div
               className="w-full lg:w-[400px] relative rounded-2xl overflow-hidden max-h-[500px] lg:max-h-[400px]"
-              role="img"
               aria-label="Brain transformation concept"
             >
               <div className="aspect-[5/3] relative w-full h-full">
@@ -102,7 +106,7 @@ export default function AboutSystemicPsychotherapy() {
             <div
               className="w-full lg:w-[550px] bg-gold-900 backdrop-blur-sm p-4 sm:p-6 rounded-2xl shadow-xl"
               role="article"
-              aria-label="Explanation of hypnosis"
+              aria-label="Explanation of systemic psychotherapy"
             >
               <BodyText variant="dark-bg" size="lg" colour="ivory">
                 Using{" "}

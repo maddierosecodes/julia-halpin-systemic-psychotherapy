@@ -48,7 +48,15 @@ export default function ServiceLayout({
           className="relative w-full h-full cursor-pointer"
           style={{ perspective: "2000px" }}
           onClick={() => setIsFlipped(!isFlipped)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              setIsFlipped(!isFlipped);
+            }
+          }}
           role="button"
+          tabIndex={0}
+          aria-expanded={isFlipped}
           aria-label={isFlipped ? "Show image" : "Show description"}
         >
           <div
@@ -85,9 +93,18 @@ export default function ServiceLayout({
                 </div>
               </div>
               {/* Content indicator */}
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-indigo-900/90 to-transparent p-4 flex items-center justify-center">
-                <div className="flex items-center gap-2 text-ivory">
-                  <IoMdInformationCircle className="w-5 h-5" />
+              <div
+                className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-indigo-900/90 to-transparent p-4 flex items-center justify-center"
+                aria-hidden="true"
+              >
+                <div
+                  className="flex items-center gap-2 text-ivory"
+                  aria-hidden="true"
+                >
+                  <IoMdInformationCircle
+                    className="w-5 h-5"
+                    aria-hidden="true"
+                  />
                   <span className="text-sm font-medium">Tap to read more</span>
                 </div>
               </div>
@@ -106,8 +123,14 @@ export default function ServiceLayout({
             >
               <div className="pr-2">
                 {!hasScrolled && (
-                  <div className="flex items-center justify-center gap-2 mb-4 text-ivory-100 transition-opacity duration-300">
-                    <IoMdInformationCircle className="w-5 h-5" />
+                  <div
+                    className="flex items-center justify-center gap-2 mb-4 text-ivory-100 transition-opacity duration-300"
+                    aria-hidden="true"
+                  >
+                    <IoMdInformationCircle
+                      className="w-5 h-5"
+                      aria-hidden="true"
+                    />
                     <span className="text-sm font-medium">
                       Scroll to read more
                     </span>

@@ -158,7 +158,7 @@ export default function Home() {
           }),
         }}
       />
-      <main id="main-content" role="main" aria-label="Home page">
+      <main id="main-content" aria-label="Home page">
         <SectionWrapper>
           <HomeHero />
         </SectionWrapper>

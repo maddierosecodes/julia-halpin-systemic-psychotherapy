@@ -22,10 +22,16 @@ export const Navigation = ({ links }: NavigationProps) => {
           } border-r border-gold-500  text-lavender-800 hover:text-lavender-100`}
         >
           {/* Top border that slides from left */}
-          <div className="absolute top-0 left-0 w-0 h-[1px] bg-gold-500 transition-all duration-500 group-hover:w-full"></div>
+          <div
+            className="absolute top-0 left-0 w-0 h-[1px] bg-gold-500 transition-all duration-500 group-hover:w-full"
+            aria-hidden="true"
+          ></div>
 
           {/* Bottom border that slides from right */}
-          <div className="absolute bottom-0 right-0 w-0 h-[1px] bg-gold-500 transition-all duration-500 group-hover:w-full"></div>
+          <div
+            className="absolute bottom-0 right-0 w-0 h-[1px] bg-gold-500 transition-all duration-500 group-hover:w-full"
+            aria-hidden="true"
+          ></div>
 
           <div className="transform skew-x-[20deg]">
             {link.dropdownItems ? (

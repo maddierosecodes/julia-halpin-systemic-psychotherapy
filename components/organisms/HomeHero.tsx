@@ -11,7 +11,7 @@ export const HomeHero = () => {
   const textContentLeft = (
     <section
       className="flex flex-col gap-4 xl:gap-6 relative w-full lg:pt-2 lg:pb-0 xl:pt-2 lg:mb-8 xl:mb-10"
-      aria-label="Introduction"
+      aria-label="Therapy Services Overview"
     >
       <div className="px-0 md:px-0 lg:px-0 lg:w-[19rem] xl:w-[22rem] lg:-ml-5 lg:px-2 xl:ml-auto lg:transform lg:-skew-x-12 xl:transform xl:-skew-x-12 lg:border-4 xl:border-4 border-gold-500 bg-lavender-100/10 lg:px-5 lg:py-3 xl:px-6 xl:py-3">
         <div className="lg:transform lg:skew-x-12 xl:transform xl:skew-x-12 leading-normal">
@@ -41,7 +41,7 @@ export const HomeHero = () => {
   const textContentRight = (
     <section
       className="flex flex-col gap-4 lg:gap-6 px-0 md:px-0 lg:px-0 md:max-w-[80%] lg:max-w-[80%] lg:w-[26rem] lg:max-w-[85%] lg:relative lg:-ml-5 xl:-ml-10 xl:w-[30rem] xl:max-w-full xl:static"
-      aria-label="Introduction"
+      aria-label="About Julia Halpin"
     >
       <div className="leading-normal">
         <header className="flex flex-col text-center lg:text-left items-center lg:items-start">
@@ -54,8 +54,14 @@ export const HomeHero = () => {
               Halpin
             </Title>
             {/* Gold underlines for lg+ */}
-            <div className="hidden lg:block absolute bottom-25 left-10 w-[55%] h-1 bg-gold-500" />
-            <div className="hidden lg:block absolute bottom-0 left-15 w-[75%] h-1 bg-gold-500" />
+            <div
+              className="hidden lg:block absolute bottom-25 left-10 w-[55%] h-1 bg-gold-500"
+              aria-hidden="true"
+            />
+            <div
+              className="hidden lg:block absolute bottom-0 left-15 w-[75%] h-1 bg-gold-500"
+              aria-hidden="true"
+            />
           </div>
 
           <Subtitle size="xl" lgSize="2xl" colour="lavender" weight="medium">
@@ -79,18 +85,36 @@ export const HomeHero = () => {
     <div className="relative w-full h-full flex flex-col justify-center items-center sm:-mt-10 md:-mt-12 lg:mt-0 lg:ml-12">
       <div className="relative w-72 h-80 md:w-64 md:h-[18rem] lg:w-[24rem] lg:h-[30rem] lg:ml-4 xl:w-[28rem] xl:h-[32rem] xl:ml-4">
         {/* Outer Arch container */}
-        <div className="relative w-[90%] md:w-[85%] lg:w-[85%] xl:w-[82%] mx-auto h-full">
+        <div
+          className="relative w-[90%] md:w-[85%] lg:w-[85%] xl:w-[82%] mx-auto h-full"
+          aria-hidden="true"
+        >
           {/* Outer Semicircle top */}
-          <div className="absolute top-0 left-0 right-0 h-[45%] lg:h-[42%] xl:h-[42%] bg-lavender-800 rounded-t-full border-t-4 border-x-4 border-gold"></div>
+          <div
+            className="absolute top-0 left-0 right-0 h-[45%] lg:h-[42%] xl:h-[42%] bg-lavender-800 rounded-t-full border-t-4 border-x-4 border-gold"
+            aria-hidden="true"
+          ></div>
           {/* Outer Rectangle bottom */}
-          <div className="absolute top-[45%] lg:top-[42%] xl:top-[42%] left-0 right-0 h-[55%] lg:h-[58%] xl:h-[58%] bg-lavender-800 border-b-4 border-x-4 border-gold"></div>
+          <div
+            className="absolute top-[45%] lg:top-[42%] xl:top-[42%] left-0 right-0 h-[55%] lg:h-[58%] xl:h-[58%] bg-lavender-800 border-b-4 border-x-4 border-gold"
+            aria-hidden="true"
+          ></div>
 
           {/* Inner Arch container - inset by 16px and shorter */}
-          <div className="absolute top-4 left-4 right-4 h-[92%] lg:h-[94%] xl:h-[95%]">
+          <div
+            className="absolute top-4 left-4 right-4 h-[92%] lg:h-[94%] xl:h-[95%]"
+            aria-hidden="true"
+          >
             {/* Inner Semicircle top */}
-            <div className="absolute top-0 left-0 right-0 h-[45%] lg:h-[42%] xl:h-[42%] bg-indigo-400 rounded-t-full"></div>
+            <div
+              className="absolute top-0 left-0 right-0 h-[45%] lg:h-[42%] xl:h-[42%] bg-indigo-400 rounded-t-full"
+              aria-hidden="true"
+            ></div>
             {/* Inner Rectangle bottom */}
-            <div className="absolute top-[45%] lg:top-[42%] xl:top-[42%] left-0 right-0 h-[55%] lg:h-[58%] xl:h-[58%] bg-indigo-400"></div>
+            <div
+              className="absolute top-[45%] lg:top-[42%] xl:top-[42%] left-0 right-0 h-[55%] lg:h-[58%] xl:h-[58%] bg-indigo-400"
+              aria-hidden="true"
+            ></div>
           </div>
 
           {/* Image container */}

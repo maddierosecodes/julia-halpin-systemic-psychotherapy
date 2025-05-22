@@ -35,7 +35,6 @@ export const ProfileImage = ({
         shapeClasses[shape]
       } ${containerClassName} ${border ? "border-3 border-gold" : ""}`}
       style={{ width: "100%", height: "100%" }}
-      role="img"
       aria-label={alt}
     >
       <Image

@@ -93,7 +93,7 @@ export default function AboutJulia() {
       >
         <ProfileImage
           src="/images/julia_halpin.jpg"
-          alt="Julia Halpin, a professional hypnotherapist based in Chorley"
+          alt="Julia Halpin, a professional systemic psychotherapist based in Chorley"
           shape="circle"
           priority={true}
           border
@@ -113,32 +113,36 @@ export default function AboutJulia() {
             "@context": "https://schema.org",
             "@type": "Person",
             name: "Julia Halpin",
-            jobTitle: " Hypnotherapist",
+            jobTitle: "Systemic Psychotherapist",
             description:
-              "Professional hypnotherapist with over 30 years of mental health experience, specialising in solution-focused Systemic Psychotherapy for anxiety, stress, and more.",
+              "Julia Halpin is a qualified systemic psychotherapist with over 30 years of mental health experience. She specialises in helping individuals, couples, and families with anxiety, relationship challenges, and emotional wellbeing.",
             image:
-              "https://juliahalpinSystemic Psychotherapy.com/images/julia_alt.jpg",
-            url: "https://juliahalpinSystemic Psychotherapy.com/about",
-            sameAs: [
-              "https://www.facebook.com/juliahalpinSystemic Psychotherapy",
-              "https://www.linkedin.com/in/julia-halpin",
-            ],
+              "https://www.familyandcoupletherapyservices.co.uk/images/julia_halpin.jpg",
+            url: "https://www.familyandcoupletherapyservices.co.uk/about",
             knowsAbout: [
-              " Systemic Psychotherapy",
+              "Systemic Psychotherapy",
+              "Family Therapy",
+              "Couple Therapy",
               "Mental Health",
-              "Anxiety Treatment",
-              "Stress Management",
-              "Stop Smoking",
-              "Phobia Treatment",
+              "Anxiety",
+              "Stress",
+              "Relationship Support",
+              "Neurodiversity",
             ],
             hasCredential: [
-              "Diploma in  Systemic Psychotherapy (DSFH)",
-              "Systemic Psychotherapy in Practice Diploma (HPD)",
-              "Registered Mental Health Nurse",
+              "Postgraduate Diploma in Systemic Psychotherapy",
+              "Registered Mental Health Nurse (RMN)",
+              "Member of UKCP",
+            ],
+            sameAs: [
+              "https://www.counselling-directory.org.uk/counsellors/julia-halpin",
+              "https://www.psychotherapy.org.uk/therapist/Julia-Halpin-iAhUbAAK",
+              "https://www.leonecentre.com/associates/julia-halpin/",
             ],
           }),
         }}
       />
+
       <section
         id="about-julia"
         className="mt-4 lg:mt-10 flex flex-col items-center justify-center px-4"
