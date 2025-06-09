@@ -1,19 +1,19 @@
-"use client";
+'use client';
 
-import { useState, FormEvent } from "react";
-import { useSearchParams } from "next/navigation";
-import { Title } from "../atoms/Title";
-import { BodyText } from "../atoms/BodyText";
-import { Button } from "../atoms/Button";
-import HCaptcha from "@hcaptcha/react-hcaptcha";
-import validator from "validator";
+import { useState, FormEvent } from 'react';
+import { useSearchParams } from 'next/navigation';
+import { Title } from '../atoms/Title';
+import { BodyText } from '../atoms/BodyText';
+import { Button } from '../atoms/Button';
+import HCaptcha from '@hcaptcha/react-hcaptcha';
+import validator from 'validator';
 
 export type EnquiryType =
-  | "supervision"
-  | "consultation"
-  | "general"
-  | "family-therapy"
-  | "couple-therapy";
+  | 'supervision'
+  | 'consultation'
+  | 'general'
+  | 'family-therapy'
+  | 'couple-therapy';
 
 interface FormData {
   firstName: string;
@@ -26,86 +26,86 @@ interface FormData {
 
 export const ContactForm = () => {
   const searchParams = useSearchParams();
-  const urlEnquiryType = searchParams.get("type") as EnquiryType | null;
+  const urlEnquiryType = searchParams.get('type') as EnquiryType | null;
   const initialEnquiryType =
     urlEnquiryType &&
     [
-      "family-therapy",
-      "couple-therapy",
-      "supervision",
-      "consultation",
-      "general",
+      'family-therapy',
+      'couple-therapy',
+      'supervision',
+      'consultation',
+      'general'
     ].includes(urlEnquiryType)
       ? urlEnquiryType
-      : "general";
+      : 'general';
 
   const [formData, setFormData] = useState<FormData>({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
     enquiryType: initialEnquiryType,
-    message: "",
+    message: ''
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<{
-    type: "success" | "error" | null;
+    type: 'success' | 'error' | null;
     message: string;
-  }>({ type: null, message: "" });
+  }>({ type: null, message: '' });
 
-  const [captchaToken, setCaptchaToken] = useState<string>("");
+  const [captchaToken, setCaptchaToken] = useState<string>('');
   const [formErrors, setFormErrors] = useState<
     Partial<Record<keyof FormData, string>>
   >({});
 
   const inputStyles =
-    "block w-full rounded-md border-lavender-200 shadow-sm focus:border-lavender-300 focus:ring-lavender-300 text-ivory-50 bg-gold-600/50 font-main placeholder-indigo-50 text-lg px-4";
-  const labelStyles = "block font-secondary text-ivory-50 text-lg";
-  const helperTextStyles = "ml-2 text-ivory-50";
-  const errorStyles = "mt-1 text-red-300 text-sm font-main";
+    'block w-full rounded-md border-lavender-200 shadow-sm focus:border-lavender-300 focus:ring-lavender-300 text-ivory-50 bg-gold-600/50 font-main placeholder-indigo-50 text-lg px-4';
+  const labelStyles = 'block font-secondary text-ivory-50 text-lg';
+  const helperTextStyles = 'ml-2 text-ivory-50';
+  const errorStyles = 'mt-1 text-red-300 text-sm font-main';
 
   const validateField = (field: keyof FormData, value: string) => {
     const errors: Partial<Record<keyof FormData, string>> = {};
 
     switch (field) {
-      case "firstName":
+      case 'firstName':
         if (value.length < 2) {
-          errors[field] = "First name must be at least 2 characters";
+          errors[field] = 'First name must be at least 2 characters';
         }
         break;
-      case "lastName":
+      case 'lastName':
         if (value.length < 2) {
-          errors[field] = "Last name must be at least 2 characters";
+          errors[field] = 'Last name must be at least 2 characters';
         }
         break;
-      case "email":
+      case 'email':
         if (!validator.isEmail(value)) {
-          errors[field] = "Please enter a valid email address";
+          errors[field] = 'Please enter a valid email address';
         }
         break;
-      case "phone":
-        if (value && !validator.isMobilePhone(value, "any")) {
-          errors[field] = "Please enter a valid international phone number";
+      case 'phone':
+        if (value && !validator.isMobilePhone(value, 'any')) {
+          errors[field] = 'Please enter a valid international phone number';
         }
         break;
-      case "message":
+      case 'message':
         if (value.length < 10) {
-          errors[field] = "Message must be at least 10 characters";
+          errors[field] = 'Message must be at least 10 characters';
         } else if (value.length > 1000) {
-          errors[field] = "Message must not exceed 1000 characters";
+          errors[field] = 'Message must not exceed 1000 characters';
         } else if (validator.isEmpty(value.trim())) {
-          errors[field] = "Message cannot be empty or only whitespace";
+          errors[field] = 'Message cannot be empty or only whitespace';
         } else {
           // Basic spam pattern check (simplified version of backend)
           const spamPatterns = [
             /\b(viagra|cialis|casino|porn|sex|xxx)\b/i,
             /\b(buy|sell|cheap|discount|offer|price)\b.*\b(now|today|limited)\b/i,
-            /\b(win|winner|prize|lottery|congratulation)\b/i,
+            /\b(win|winner|prize|lottery|congratulation)\b/i
           ];
 
           if (spamPatterns.some((pattern) => pattern.test(value))) {
-            errors[field] = "Message contains prohibited content";
+            errors[field] = 'Message contains prohibited content';
           }
         }
         break;
@@ -131,14 +131,14 @@ export const ContactForm = () => {
     let isValid = true;
 
     Object.entries(formData).forEach(([field, value]) => {
-      if (field === "phone" && !value) return; // Skip optional phone validation if empty
+      if (field === 'phone' && !value) return; // Skip optional phone validation if empty
       if (!validateField(field as keyof FormData, value)) {
         isValid = false;
       }
     });
 
     if (!captchaToken) {
-      allErrors.message = "Please complete the captcha verification";
+      allErrors.message = 'Please complete the captcha verification';
       isValid = false;
     }
 
@@ -154,20 +154,20 @@ export const ContactForm = () => {
     }
 
     setIsSubmitting(true);
-    setSubmitStatus({ type: null, message: "" });
+    setSubmitStatus({ type: null, message: '' });
     // Clear any existing form errors before submission
     setFormErrors({});
 
     try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
+      const response = await fetch('/api/contact', {
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify({
           ...formData,
-          captchaToken,
-        }),
+          captchaToken
+        })
       });
 
       const data = await response.json();
@@ -176,46 +176,46 @@ export const ContactForm = () => {
         // Handle validation errors from backend
         if (response.status === 400 && data.error) {
           // Map backend error messages to form fields
-          if (data.error.includes("email")) {
+          if (data.error.includes('email')) {
             setFormErrors((prev) => ({ ...prev, email: data.error }));
-          } else if (data.error.includes("phone")) {
+          } else if (data.error.includes('phone')) {
             setFormErrors((prev) => ({ ...prev, phone: data.error }));
-          } else if (data.error.includes("message")) {
+          } else if (data.error.includes('message')) {
             setFormErrors((prev) => ({ ...prev, message: data.error }));
-          } else if (data.error.includes("captcha")) {
+          } else if (data.error.includes('captcha')) {
             setFormErrors((prev) => ({ ...prev, message: data.error }));
-            setCaptchaToken("");
+            setCaptchaToken('');
           } else {
             // If we can't map the error to a specific field, show it in the submit status
             throw new Error(data.error);
           }
           return;
         }
-        throw new Error(data.error || "Failed to send message");
+        throw new Error(data.error || 'Failed to send message');
       }
 
       setSubmitStatus({
-        type: "success",
-        message: "Thank you for your message. I will get back to you soon.",
+        type: 'success',
+        message: 'Thank you for your message. I will get back to you soon.'
       });
 
       // Reset form after successful submission
       setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        phone: "",
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
         enquiryType: initialEnquiryType,
-        message: "",
+        message: ''
       });
-      setCaptchaToken("");
+      setCaptchaToken('');
     } catch (error) {
       setSubmitStatus({
-        type: "error",
+        type: 'error',
         message:
           error instanceof Error
             ? error.message
-            : "Sorry, there was an error sending your message. Please try again.",
+            : 'Sorry, there was an error sending your message. Please try again.'
       });
     } finally {
       setIsSubmitting(false);
@@ -238,11 +238,10 @@ export const ContactForm = () => {
         {submitStatus.type && (
           <div
             className={`p-4 rounded-md ${
-              submitStatus.type === "success"
-                ? "bg-green-100/90 text-green-800"
-                : "bg-red-100/90 text-red-800"
-            }`}
-          >
+              submitStatus.type === 'success'
+                ? 'bg-green-100/90 text-green-800'
+                : 'bg-red-100/90 text-red-800'
+            }`}>
             {submitStatus.message}
           </div>
         )}
@@ -257,11 +256,11 @@ export const ContactForm = () => {
               required
               placeholder="Your first name"
               className={`${inputStyles} mt-2 py-3 ${
-                formErrors.firstName ? "border-red-400" : ""
+                formErrors.firstName ? 'border-red-400' : ''
               }`}
               value={formData.firstName}
-              onChange={(e) => handleInputChange("firstName", e.target.value)}
-              onBlur={(e) => validateField("firstName", e.target.value)}
+              onChange={(e) => handleInputChange('firstName', e.target.value)}
+              onBlur={(e) => validateField('firstName', e.target.value)}
             />
             {formErrors.firstName && (
               <p className={errorStyles}>{formErrors.firstName}</p>
@@ -277,11 +276,11 @@ export const ContactForm = () => {
               required
               placeholder="Your last name"
               className={`${inputStyles} mt-2 py-3 ${
-                formErrors.lastName ? "border-red-400" : ""
+                formErrors.lastName ? 'border-red-400' : ''
               }`}
               value={formData.lastName}
-              onChange={(e) => handleInputChange("lastName", e.target.value)}
-              onBlur={(e) => validateField("lastName", e.target.value)}
+              onChange={(e) => handleInputChange('lastName', e.target.value)}
+              onBlur={(e) => validateField('lastName', e.target.value)}
             />
             {formErrors.lastName && (
               <p className={errorStyles}>{formErrors.lastName}</p>
@@ -300,11 +299,11 @@ export const ContactForm = () => {
               required
               placeholder="your.email@example.com"
               className={`${inputStyles} mt-2 py-3 ${
-                formErrors.email ? "border-red-400" : ""
+                formErrors.email ? 'border-red-400' : ''
               }`}
               value={formData.email}
-              onChange={(e) => handleInputChange("email", e.target.value)}
-              onBlur={(e) => validateField("email", e.target.value)}
+              onChange={(e) => handleInputChange('email', e.target.value)}
+              onBlur={(e) => validateField('email', e.target.value)}
             />
             {formErrors.email && (
               <p className={errorStyles}>{formErrors.email}</p>
@@ -319,11 +318,11 @@ export const ContactForm = () => {
               id="phone"
               placeholder="Your phone number"
               className={`${inputStyles} mt-2 py-3 ${
-                formErrors.phone ? "border-red-400" : ""
+                formErrors.phone ? 'border-red-400' : ''
               }`}
               value={formData.phone}
-              onChange={(e) => handleInputChange("phone", e.target.value)}
-              onBlur={(e) => validateField("phone", e.target.value)}
+              onChange={(e) => handleInputChange('phone', e.target.value)}
+              onBlur={(e) => validateField('phone', e.target.value)}
             />
             {formErrors.phone && (
               <p className={errorStyles}>{formErrors.phone}</p>
@@ -343,20 +342,17 @@ export const ContactForm = () => {
             onChange={(e) =>
               setFormData({
                 ...formData,
-                enquiryType: e.target.value as EnquiryType,
+                enquiryType: e.target.value as EnquiryType
               })
-            }
-          >
+            }>
             <option
               className="bg-gold-700 text-ivory-50"
-              value="family-therapy"
-            >
+              value="family-therapy">
               Family Therapy
             </option>
             <option
               className="bg-gold-700 text-ivory-50"
-              value="couple-therapy"
-            >
+              value="couple-therapy">
               Couple Therapy
             </option>
             <option className="bg-gold-700 text-ivory-50" value="supervision">
@@ -382,12 +378,11 @@ export const ContactForm = () => {
             maxLength={1000}
             placeholder="Please tell me a bit about what you'd like help with..."
             className={`${inputStyles} mt-2 ${
-              formErrors.message ? "border-red-400" : ""
+              formErrors.message ? 'border-red-400' : ''
             }`}
             value={formData.message}
-            onChange={(e) => handleInputChange("message", e.target.value)}
-            onBlur={(e) => validateField("message", e.target.value)}
-          ></textarea>
+            onChange={(e) => handleInputChange('message', e.target.value)}
+            onBlur={(e) => validateField('message', e.target.value)}></textarea>
           {formErrors.message && (
             <p className={errorStyles}>{formErrors.message}</p>
           )}
@@ -395,51 +390,51 @@ export const ContactForm = () => {
 
         <div className="flex flex-col items-center gap-2">
           <HCaptcha
-            sitekey={process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY || ""}
+            sitekey={process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY || ''}
             onVerify={(token) => {
               // Only log in development
-              if (process.env.NODE_ENV === "development") {
-                console.log("hCaptcha verification successful");
+              if (process.env.NODE_ENV === 'development') {
+                console.log('hCaptcha verification successful');
               }
               setCaptchaToken(token);
               setFormErrors((prev) => ({ ...prev, message: undefined }));
             }}
             onError={() => {
               // Log error without sensitive details
-              if (process.env.NODE_ENV === "development") {
-                console.error("hCaptcha verification failed");
+              if (process.env.NODE_ENV === 'development') {
+                console.error('hCaptcha verification failed');
               }
               setFormErrors((prev) => ({
                 ...prev,
-                message: "Captcha verification failed. Please try again.",
+                message: 'Captcha verification failed. Please try again.'
               }));
-              setCaptchaToken("");
+              setCaptchaToken('');
             }}
             onExpire={() => {
-              if (process.env.NODE_ENV === "development") {
-                console.log("hCaptcha token expired");
+              if (process.env.NODE_ENV === 'development') {
+                console.log('hCaptcha token expired');
               }
-              setCaptchaToken("");
+              setCaptchaToken('');
               setFormErrors((prev) => ({
                 ...prev,
-                message: "Captcha expired. Please verify again.",
+                message: 'Captcha expired. Please verify again.'
               }));
             }}
             onOpen={() => {
-              if (process.env.NODE_ENV === "development") {
-                console.log("hCaptcha challenge opened");
+              if (process.env.NODE_ENV === 'development') {
+                console.log('hCaptcha challenge opened');
               }
             }}
             onClose={() => {
-              if (process.env.NODE_ENV === "development") {
-                console.log("hCaptcha challenge closed");
+              if (process.env.NODE_ENV === 'development') {
+                console.log('hCaptcha challenge closed');
               }
             }}
             theme="light"
             size="normal"
             reCaptchaCompat={false}
           />
-          {!captchaToken && formErrors.message?.includes("captcha") && (
+          {!captchaToken && formErrors.message?.includes('captcha') && (
             <p className={errorStyles}>
               Please complete the captcha verification
             </p>
@@ -447,14 +442,8 @@ export const ContactForm = () => {
         </div>
 
         <div className="flex justify-center pt-4">
-          <Button
-            type="submit"
-            variant="primary"
-            size="medium"
-            darkBg
-            disabled={isSubmitting}
-          >
-            {isSubmitting ? "Sending..." : "Send Message"}
+          <Button type="submit" size="medium" darkBg disabled={isSubmitting}>
+            {isSubmitting ? 'Sending...' : 'Send Message'}
           </Button>
         </div>
       </form>

@@ -10,7 +10,6 @@ export const Button = ({
   children,
   size = 'medium',
   darkBg = false,
-  className = '',
   ...props
 }: ButtonProps) => {
   const baseStyles = `relative transform skew-x-[20deg] inline-block font-main text-md font-bold shadow-[5px_5px_0px_0px_rgba(198,166,100,0.5)] transition-all duration-500 group cursor-pointer border-2 border-gold-500 overflow-hidden focus:outline-none focus:ring-2 focus:ring-lavender-500 focus:ring-offset-2 ${
@@ -26,9 +25,7 @@ export const Button = ({
   };
 
   return (
-    <button
-      className={`${baseStyles} ${sizeStyles[size]} ${className}`}
-      {...props}>
+    <button className={`${baseStyles} ${sizeStyles[size]}`} {...props}>
       <span className="transform skew-x-[-20deg] inline-block relative left-0 whitespace-nowrap text-center">
         {children}
       </span>
