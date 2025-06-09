@@ -2,14 +2,12 @@ import { ButtonHTMLAttributes, ReactNode } from 'react';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
-  variant?: 'primary' | 'secondary';
   size?: 'small' | 'medium' | 'large';
   darkBg?: boolean;
 }
 
 export const Button = ({
   children,
-  variant = 'primary',
   size = 'medium',
   darkBg = false,
   className = '',
