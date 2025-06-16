@@ -1,21 +1,20 @@
-import React from "react";
-import { Title } from "../atoms/Title";
-import { Subtitle } from "../atoms/Subtitle";
-import { BodyText } from "../atoms/BodyText";
-import { Hero } from "../molecules/Hero";
-import { ProfileImage } from "../atoms/ProfileImage";
-import { CTALink } from "../atoms/CTALink";
-import Link from "next/link";
-import Script from "next/script";
-import { juliaSchema } from "@/schemas/juliaSchema";
+import React from 'react';
+import { Title } from '../atoms/Title';
+import { Subtitle } from '../atoms/Subtitle';
+import { BodyText } from '../atoms/BodyText';
+import { Hero } from '../molecules/Hero';
+import { ProfileImage } from '../atoms/ProfileImage';
+import { CTALink } from '../atoms/CTALink';
+import Link from 'next/link';
+import Script from 'next/script';
+import { juliaSchema } from '@/schemas/juliaSchema';
 
 export default function AboutJulia() {
   const heroText = (
     <div
       className="flex flex-col items-center text-center p-3 xl:pr-10 bg-lavender-50/70 rounded-lg shadow-md border-3 border-gold lg:max-h-[550px] lg:h-full lg:self-center"
       role="article"
-      aria-label="About Julia Halpin"
-    >
+      aria-label="About Julia Halpin">
       <div className="lg:block hidden">
         <Title size="4xl" colour="lavender" weight="bold">
           Julia Halpin
@@ -28,50 +27,48 @@ export default function AboutJulia() {
 
       <div className="w-full lg:max-w-2xl my-4 sm:my-6 text-base sm:text-lg text-ink-500 lg:overflow-y-auto lg:pr-4 [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-indigo-800 [&::-webkit-scrollbar-thumb]:bg-lavender-300 [&::-webkit-scrollbar-thumb]:rounded-full [scrollbar-width:thin] [scrollbar-color:rgb(225,218,248)_rgb(35,35,67)]">
         <BodyText size="lg">
-          I&apos;m Julia, a{" "}
+          I&apos;m Julia, a{' '}
           <span className="highlight-indigo">
             UKCP-registered Systemic Psychotherapist
-          </span>{" "}
-          with over{" "}
-          <span className="highlight-text">35 years of experience</span> as a
-          Registered Mental Health Nurse (RMN), including{" "}
+          </span>{' '}
+          with over{' '}
+          <span className="highlight-text">27 years of experience</span> as a
+          Registered Mental Health Nurse (RMN), including{' '}
           <span className="emphasis-text">
-            22 years in Child and Adolescent Mental Health Services
-          </span>{" "}
-          and{" "}
+            25 years in Child and Adolescent Mental Health Services
+          </span>{' '}
+          and{' '}
           <span className="emphasis-text">13 years in Adult Mental Health</span>
           .
-          <br />I work with{" "}
-          <span className="highlight-lavender">
-            individuals, couples, and families
-          </span>{" "}
-          to help them understand the patterns of interaction that shape their
+          <br />I work with{' '}
+          <span className="highlight-lavender">couples, and families</span> to
+          help them understand the patterns of interaction that shape their
           relationships and wellbeing.
           <br />
           <span className="emphasis-text">
             Systemic psychotherapy offers a compassionate, non-blaming approach
-          </span>{" "}
+          </span>{' '}
           that creates space for each person&apos;s perspective to be heard and
-          valued, working to support clients facing{" "}
+          valued, working to support clients facing{' '}
           <span className="highlight-text">
-            anxiety, communication difficulties, neurodiversity, self-esteem
-            issues, and family conflict
-          </span>
-          .
-          <br />I also offer{" "}
+            relationship & communication difficulties{' '}
+          </span>{' '}
+          and <span className="highlight-text">family conflict</span>, including
+          experience working with{' '}
+          <span className="highlight-text">neurodiversity</span>.
+          <br />I also offer{' '}
           <span className="highlight-lavender">
-            supervision to qualified and trainee Systemic Psychotherapists &
-            Systemic Practitioners
+            supervision to qualified Systemic Psychotherapists & consultation to
+            MSC Trainees.
           </span>
           .
           <br />
           <span className="highlight-indigo">
             <Link
               href="/contact?enquiry=general"
-              className="underline decoration-2 underline-offset-4 hover:text-lavender-500 hover:decoration-lavender-500 transition-all"
-            >
+              className="underline decoration-2 underline-offset-4 hover:text-lavender-500 hover:decoration-lavender-500 transition-all">
               Get in touch
-            </Link>{" "}
+            </Link>{' '}
             to discuss how I can support you.
           </span>
         </BodyText>
@@ -90,8 +87,7 @@ export default function AboutJulia() {
       <div
         className="w-full max-w-[280px] sm:max-w-md mx-auto aspect-square p-4 lg:self-center"
         role="img"
-        aria-label="Julia Halpin's profile image"
-      >
+        aria-label="Julia Halpin's profile image">
         <ProfileImage
           src="/images/julia_halpin.jpg"
           alt="Julia Halpin, a professional systemic psychotherapist based in Chorley"
@@ -110,15 +106,14 @@ export default function AboutJulia() {
         id="julia-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(juliaSchema),
+          __html: JSON.stringify(juliaSchema)
         }}
       />
 
       <section
         id="about-julia"
         className="mt-4 lg:mt-10 flex flex-col items-center justify-center px-4"
-        aria-labelledby="about-julia-heading"
-      >
+        aria-labelledby="about-julia-heading">
         <h2 id="about-julia-heading" className="sr-only">
           About Julia Halpin
         </h2>

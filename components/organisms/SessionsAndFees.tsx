@@ -1,16 +1,16 @@
-import React from "react";
-import { Title } from "../atoms/Title";
-import { BodyText } from "../atoms/BodyText";
-import { Subtitle } from "../atoms/Subtitle";
-import { SectionHeading } from "../atoms/SectionHeading";
-import Image from "next/image";
-import flower from "@/public/images/flower.jpg";
-import { StructuredTable } from "../molecules/StructuredTable";
-import { NavLink } from "../atoms/NavLink";
+import React from 'react';
+import { Title } from '../atoms/Title';
+import { BodyText } from '../atoms/BodyText';
+import { Subtitle } from '../atoms/Subtitle';
+import { SectionHeading } from '../atoms/SectionHeading';
+import Image from 'next/image';
+import flower from '@/public/images/flower.jpg';
+import { StructuredTable } from '../molecules/StructuredTable';
+import { NavLink } from '../atoms/NavLink';
 
 export default function SessionsAndFees() {
-  const days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
-  const timeSlots = ["Morning", "Afternoon", "Evening", "Night"];
+  const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+  const timeSlots = ['Morning', 'Afternoon', 'Evening', 'Night'];
 
   // Define availability data with checkmarks
   const availabilityData = {
@@ -20,23 +20,21 @@ export default function SessionsAndFees() {
     Thu: { Morning: false, Afternoon: false, Evening: true, Night: false },
     Fri: { Morning: true, Afternoon: true, Evening: true, Night: false },
     Sat: { Morning: true, Afternoon: false, Evening: false, Night: false },
-    Sun: { Morning: true, Afternoon: false, Evening: false, Night: false },
+    Sun: { Morning: true, Afternoon: false, Evening: false, Night: false }
   };
 
   return (
     <section
       id="sessionAndFees"
       className="flex flex-col justify-center items-center gap-3 mx-auto px-4 sm:px-6 md:px-8 xl:px-0 max-w-7xl mb-8 mt-4"
-      aria-labelledby="sessions-and-fees-heading"
-    >
+      aria-labelledby="sessions-and-fees-heading">
       <div className="text-center mb-8 w-full">
         <Title
           size="4xl"
           smSize="5xl"
           lgSize="6xl"
           weight="bold"
-          colour="indigo"
-        >
+          colour="indigo">
           Sessions & Fees
         </Title>
       </div>
@@ -68,25 +66,24 @@ export default function SessionsAndFees() {
                   variant="dark-bg"
                   size="2xl"
                   colour="ivory"
-                  weight="bold"
-                >
+                  weight="bold">
                   Important Information:
                 </Subtitle>
 
                 <div className="mt-3">
                   <BodyText variant="dark-bg" size="md" colour="ivory">
-                    Therapy is flexible and tailored to your needs.{" "}
+                    Therapy is flexible and tailored to your needs.{' '}
                     <span className="highlight-indigo-dark">
                       Sessions can range from 4-6 meetings to longer-term
                       support
                     </span>
-                    , with progress reviewed regularly.{" "}
+                    , with progress reviewed regularly.{' '}
                     <span className="emphasis-text-dark">
                       Appointments can be weekly, fortnightly, or spread over
                       longer periods
                     </span>
                     <br />
-                    For family therapy,{" "}
+                    For family therapy,{' '}
                     <span className="highlight-lavender-dark">
                       attendance is flexible - different family members can
                       attend different sessions
@@ -121,16 +118,15 @@ export default function SessionsAndFees() {
                   <SectionHeading
                     variant="dark-bg"
                     colour="ivory"
-                    isInteractive
-                  >
+                    isInteractive>
                     Initial Consultation – Free
                   </SectionHeading>
                 </NavLink>
                 <p className="text-sm md:text-base">
-                  A{" "}
+                  A{' '}
                   <span className="highlight-lavender-dark">
                     20-minute telephone consultation
-                  </span>{" "}
+                  </span>{' '}
                   to discuss your needs and how I can help.
                 </p>
               </div>
@@ -140,13 +136,12 @@ export default function SessionsAndFees() {
                   <SectionHeading
                     variant="dark-bg"
                     colour="ivory"
-                    isInteractive
-                  >
+                    isInteractive>
                     Couple & Family Therapy
                   </SectionHeading>
                 </NavLink>
                 <p className="text-sm md:text-base">
-                  Sessions range from{" "}
+                  Sessions range from{' '}
                   <span className="highlight-indigo-dark">£100 - £150</span>.
                   <br />
                   <span className="emphasis-text-dark">
@@ -161,22 +156,21 @@ export default function SessionsAndFees() {
                   <SectionHeading
                     variant="dark-bg"
                     colour="ivory"
-                    isInteractive
-                  >
+                    isInteractive>
                     Supervision
                   </SectionHeading>
                 </NavLink>
                 <p className="text-sm md:text-base">
-                  <span className="highlight-lavender-dark">Online:</span>{" "}
+                  <span className="highlight-lavender-dark">Online:</span>{' '}
                   <span className="highlight-indigo-dark">
-                    £100 (60 min), £130 (90 min)
+                    £90 (60 min), £120 (90 min)
                   </span>
                   <br />
                   <span className="highlight-lavender-dark">
                     In person:
-                  </span>{" "}
+                  </span>{' '}
                   <span className="highlight-indigo-dark">
-                    £120 (60 min), £150 (90 min)
+                    £100 (60 min), £130 (90 min)
                   </span>
                 </p>
               </div>
@@ -186,24 +180,23 @@ export default function SessionsAndFees() {
                   <SectionHeading
                     variant="dark-bg"
                     colour="ivory"
-                    isInteractive
-                  >
+                    isInteractive>
                     MSc Student Consultation Package
                   </SectionHeading>
                 </NavLink>
                 <p className="text-sm md:text-base">
                   <span className="emphasis-text-dark">
                     6 x 60 min sessions
-                  </span>{" "}
+                  </span>{' '}
                   for MSc students in Family Therapy
                   <br />
-                  <span className="highlight-lavender-dark">Online:</span>{" "}
+                  <span className="highlight-lavender-dark">Online:</span>{' '}
                   <span className="highlight-indigo-dark">£500</span>
                   <br />
                   <span className="highlight-lavender-dark">
                     In person:
-                  </span>{" "}
-                  <span className="highlight-indigo-dark">£600</span>
+                  </span>{' '}
+                  <span className="highlight-indigo-dark">£560</span>
                 </p>
               </div>
             </div>

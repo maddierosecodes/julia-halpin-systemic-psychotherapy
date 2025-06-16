@@ -1,9 +1,9 @@
-import React from "react";
-import Image from "next/image";
-import { BodyText } from "../atoms/BodyText";
-import { Title } from "../atoms/Title";
-import Script from "next/script";
-import { systemicPsychotherapySchema } from "@/schemas/systemicPsychotherapySchema";
+import React from 'react';
+import Image from 'next/image';
+import { BodyText } from '../atoms/BodyText';
+import { Title } from '../atoms/Title';
+import Script from 'next/script';
+import { systemicPsychotherapySchema } from '@/schemas/systemicPsychotherapySchema';
 
 export default function AboutSystemicPsychotherapy() {
   return (
@@ -12,14 +12,13 @@ export default function AboutSystemicPsychotherapy() {
         id="systemic-psychotherapy-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(systemicPsychotherapySchema),
+          __html: JSON.stringify(systemicPsychotherapySchema)
         }}
       />
       <section
         id="about-systemic-psychotherapy"
         className="pt-8"
-        aria-labelledby="about-systemic-psychotherapy-heading"
-      >
+        aria-labelledby="about-systemic-psychotherapy-heading">
         <h2 id="about-systemic-psychotherapy-heading" className="sr-only">
           About Systemic Psychotherapy
         </h2>
@@ -27,8 +26,7 @@ export default function AboutSystemicPsychotherapy() {
           <div className="relative mb-12 max-w-5xl mx-auto mt-5">
             <div
               className="block min-h-[400px] sm:aspect-[21/8] w-full relative rounded-2xl overflow-hidden"
-              aria-label="Growth and transformation concept"
-            >
+              aria-label="Growth and transformation concept">
               <Image
                 src="/images/gold_clouds.jpg"
                 alt="Growth and transformation symbolized by a plant - representing personal development through Systemic Psychotherapy"
@@ -48,18 +46,19 @@ export default function AboutSystemicPsychotherapy() {
                 <BodyText variant="dark-bg" size="lg" colour="ivory">
                   <strong className="highlight-lavender-dark">
                     Systemic Psychotherapy
-                  </strong>{" "}
-                  focuses on relationships — how we communicate, interact, and
-                  influence one another. It sees difficulties not just in
-                  individuals, but in the{" "}
+                  </strong>{' '}
+                  focuses on relationships — how we communicate, interact,
+                  understand and support each other. It sees difficulties not
+                  just in individuals, but in the{' '}
                   <em className="emphasis-text-dark">
                     patterns and dynamics between people
                   </em>
-                  , such as couples or families. Rather than assigning blame, it{" "}
+                  , such as couples or families. Rather than assigning blame, it{' '}
                   <strong className="highlight-lavender-dark">
-                    creates space for everyone&apos;s voice
-                  </strong>{" "}
-                  to be heard and understood.
+                    creates space for everyone&apos;s views and experiences
+                  </strong>{' '}
+                  to be heard, building on family strengths and resources to
+                  make positive changes in their relationships.
                 </BodyText>
               </div>
             </div>
@@ -68,8 +67,7 @@ export default function AboutSystemicPsychotherapy() {
           <div className="relative mb-12 max-w-5xl mx-auto flex flex-col lg:flex-row gap-4 lg:gap-8 items-center lg:items-start justify-center">
             <div
               className="w-full lg:w-[400px] relative rounded-2xl overflow-hidden max-h-[500px] lg:max-h-[400px]"
-              aria-label="Brain transformation concept"
-            >
+              aria-label="Brain transformation concept">
               <div className="aspect-[5/3] relative w-full h-full">
                 <Image
                   src="/images/gold_steps.jpg"
@@ -82,28 +80,22 @@ export default function AboutSystemicPsychotherapy() {
             <div
               className="w-full lg:w-[550px] bg-gold-900 backdrop-blur-sm p-4 sm:p-6 rounded-2xl shadow-xl"
               role="article"
-              aria-label="Explanation of systemic psychotherapy"
-            >
+              aria-label="Explanation of systemic psychotherapy">
               <BodyText variant="dark-bg" size="lg" colour="ivory">
-                Using{" "}
+                The aim is not to{' '}
                 <strong className="highlight-text-dark">
-                  open, reflective questions
-                </strong>
-                , systemic therapy helps identify
+                  take sides or assign blame,{' '}
+                </strong>{' '}
+                <br />
+                rather to facilitate a{' '}
                 <strong className="highlight-lavender-dark">
-                  {" "}
-                  unhelpful patterns
-                </strong>{" "}
-                and explore what new ways of relating might look like. By{" "}
-                <em className="emphasis-text-dark">
-                  focusing on what&apos;s happening between people — not just
-                  within them
-                </em>
-                , it supports families and couples to move forward together with{" "}
-                <strong className="highlight-text-dark">
-                  more clarity, empathy, and connection
-                </strong>
-                .
+                  {' '}
+                  shared understanding
+                </strong>{' '}
+                <br />
+                and explore
+                <em className="emphasis-text-dark"> new ways of relating</em> to
+                each other.
               </BodyText>
             </div>
           </div>
