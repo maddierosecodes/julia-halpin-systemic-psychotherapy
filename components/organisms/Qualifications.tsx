@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { FaUserGraduate, FaHandHoldingMedical } from 'react-icons/fa';
+import { FaUserGraduate } from 'react-icons/fa';
 import { MdSupervisorAccount } from 'react-icons/md';
 import PSAImage from '@/public/images/psa.png';
 import UKCPImage from '@/public/images/UKCP.webp';
