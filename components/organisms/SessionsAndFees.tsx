@@ -16,8 +16,8 @@ export default function SessionsAndFees() {
   const availabilityData = {
     Mon: { Morning: false, Afternoon: false, Evening: false, Night: false },
     Tue: { Morning: false, Afternoon: false, Evening: false, Night: false },
-    Wed: { Morning: false, Afternoon: false, Evening: true, Night: false },
-    Thu: { Morning: false, Afternoon: false, Evening: true, Night: false },
+    Wed: { Morning: true, Afternoon: true, Evening: true, Night: false },
+    Thu: { Morning: true, Afternoon: true, Evening: true, Night: false },
     Fri: { Morning: true, Afternoon: true, Evening: true, Night: false },
     Sat: { Morning: true, Afternoon: false, Evening: false, Night: false },
     Sun: { Morning: true, Afternoon: false, Evening: false, Night: false }

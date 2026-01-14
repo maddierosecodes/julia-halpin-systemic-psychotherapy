@@ -31,9 +31,7 @@ export default function AboutJulia() {
           <span className="highlight-indigo">
             UKCP-registered Systemic Psychotherapist
           </span>{' '}
-          with over{' '}
-          <span className="highlight-text">27 years of experience</span> as a
-          Registered Mental Health Nurse (RMN), including{' '}
+          with{' '}
           <span className="emphasis-text">
             25 years in Child and Adolescent Mental Health Services
           </span>{' '}
