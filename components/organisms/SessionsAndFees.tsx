@@ -141,9 +141,6 @@ export default function SessionsAndFees() {
                   </SectionHeading>
                 </NavLink>
                 <p className="text-sm md:text-base">
-                  Sessions range from{' '}
-                  <span className="highlight-indigo-dark">£100 - £150</span>.
-                  <br />
                   <span className="emphasis-text-dark">
                     Please contact me to discuss your specific needs
                   </span>
