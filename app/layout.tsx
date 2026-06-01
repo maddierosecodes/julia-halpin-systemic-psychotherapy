@@ -11,7 +11,7 @@ export const metadata: Metadata = {
       '%s | Systemic Psychotherapy in Chorley | Family and Couple Therapy Services'
   },
   description:
-    'Julia Halpin is a Systemic Psychotherapist based in Chorley, offering compassionate, evidence-based therapy for individuals, couples, and families. Online and in-person sessions available.',
+    'Julia Halpin is a Systemic Psychotherapist based in Chorley, offering compassionate, evidence-based therapy for couples, and families. Online and in-person sessions available.',
   keywords: [
     'Systemic Psychotherapy Chorley',
     'family therapy',
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     title:
       'Systemic Psychotherapy in Chorley | Family and Couple Therapy Services',
     description:
-      'Looking for family, couple, or individual therapy in Chorley? Julia Halpin offers evidence-based Systemic Psychotherapy both in-person and online.',
+      'Looking for family or couple therapy in Chorley? Julia Halpin offers evidence-based Systemic Psychotherapy both in-person and online.',
     url: 'https://www.familyandcoupletherapyservices.co.uk/',
     siteName: 'Family and Couple Therapy Services',
     locale: 'en_GB',
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     title:
       'Systemic Psychotherapy in Chorley | Family and Couple Therapy Services',
     description:
-      'Professional therapy services for individuals, couples, and families in Chorley. Run by Julia Halpin, a qualified Systemic Psychotherapist with NHS experience.',
+      'Professional therapy services for couples and families in Chorley. Run by Julia Halpin, a qualified Systemic Psychotherapist with NHS experience.',
     images: [
       'https://www.familyandcoupletherapyservices.co.uk/images/julia_halpin.jpg'
     ]

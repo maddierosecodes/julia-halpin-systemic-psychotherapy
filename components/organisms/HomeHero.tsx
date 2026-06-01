@@ -27,7 +27,7 @@ export const HomeHero = () => {
               <span className="highlight-indigo">
                 evidence-informed therapy
               </span>{" "}
-              for families, couples, and individuals looking to{" "}
+              for families and couples looking to{" "}
               <span className="emphasis-text">improve their relationships</span>
               , <span className="highlight-text">communication</span>, and
               <span className="highlight-lavender"> emotional well-being</span>.

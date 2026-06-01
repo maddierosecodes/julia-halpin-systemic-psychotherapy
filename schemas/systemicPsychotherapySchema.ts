@@ -4,7 +4,7 @@ export const systemicPsychotherapySchema = {
   name: "Systemic Psychotherapy",
   url: "https://www.familyandcoupletherapyservices.co.uk/about#aboutSystemicPsychotherapy",
   description:
-    "Systemic Psychotherapy is a relational approach to mental health treatment that focuses on understanding patterns within families and relationships. It supports individuals, couples, and families in making meaningful changes through collaborative dialogue.",
+    "Systemic Psychotherapy is a relational approach to mental health treatment that focuses on understanding patterns within families and relationships. It supports couples and families in making meaningful changes through collaborative dialogue.",
   therapyType: "Systemic",
   medicalSpecialty: {
     "@type": "MedicalSpecialty",

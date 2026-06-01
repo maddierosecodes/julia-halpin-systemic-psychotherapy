@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Contact Julia Halpin | Systemic Psychotherapist in Chorley",
     description:
-      "Get in touch with Julia Halpin for systemic psychotherapy. Enquire about therapy for families, couples, and individuals in Chorley or online.",
+      "Get in touch with Julia Halpin for systemic psychotherapy. Enquire about therapy for families or couples in Chorley or online.",
     images: [
       "https://www.familyandcoupletherapyservices.co.uk/images/julia_halpin.jpg",
     ],

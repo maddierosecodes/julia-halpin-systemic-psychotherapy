@@ -5,7 +5,7 @@ export const servicesSchema = {
   name: "Family and Couple Therapy Services",
   url: "https://www.familyandcoupletherapyservices.co.uk/services",
   description:
-    "Professional systemic psychotherapy services in Chorley with Julia Halpin, including therapy for families, couples, and individuals, plus professional supervision and MSc student consultations.",
+    "Professional systemic psychotherapy services in Chorley with Julia Halpin, including therapy for families and couples, plus professional supervision and MSc student consultations.",
   provider: {
     "@type": "Person",
     name: "Julia Halpin",

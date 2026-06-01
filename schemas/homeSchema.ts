@@ -74,7 +74,7 @@ export const homeSchema = {
       "@type": "MedicalTherapy",
       name: "Systemic Psychotherapy",
       description:
-        "Psychotherapy using systemic approaches, including work with families, couples, and individuals.",
+        "Psychotherapy using systemic approaches, including work with families and couples.",
     },
     {
       "@type": "MedicalTherapy",

@@ -4,7 +4,7 @@ export const treatmentAreasSchema = {
   name: "Family and Couple Therapy Services",
   url: "https://www.familyandcoupletherapyservices.co.uk/services#supportOffered",
   description:
-    "Systemic Psychotherapy services in Chorley supporting individuals, couples, and families with a wide range of emotional and relational challenges.",
+    "Systemic Psychotherapy services in Chorley supporting couples and families with a wide range of emotional and relational challenges.",
   medicalSpecialty: {
     "@type": "MedicalSpecialty",
     name: "Mental Health",
@@ -20,7 +20,7 @@ export const treatmentAreasSchema = {
       "@type": "MedicalTherapy",
       name: "Bereavement and Grief",
       description:
-        "Therapy for individuals and families processing loss and grief.",
+        "Therapy for families processing loss and grief.",
     },
     {
       "@type": "MedicalTherapy",
@@ -43,7 +43,7 @@ export const treatmentAreasSchema = {
       "@type": "MedicalTherapy",
       name: "Emotional Regulation Difficulties",
       description:
-        "Helping individuals improve emotional awareness and response.",
+        "Helping couples and families improve emotional awareness and response.",
     },
     {
       "@type": "MedicalTherapy",
@@ -54,7 +54,7 @@ export const treatmentAreasSchema = {
       "@type": "MedicalTherapy",
       name: "Mental Health Conditions",
       description:
-        "Relational therapy for individuals living with diagnosed mental health conditions.",
+        "Relational therapy for couples and families living with diagnosed mental health conditions.",
     },
   ],
 };

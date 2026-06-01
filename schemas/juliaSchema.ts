@@ -4,7 +4,7 @@ export const juliaSchema = {
   name: "Julia Halpin",
   jobTitle: "Systemic Psychotherapist",
   description:
-    "Julia Halpin is a qualified systemic psychotherapist with over 30 years of mental health experience. She specialises in helping individuals, couples, and families with anxiety, relationship challenges, and emotional wellbeing.",
+    "Julia Halpin is a qualified systemic psychotherapist with over 30 years of mental health experience. She specialises in helping couples and families with anxiety, relationship challenges, and emotional wellbeing.",
   image:
     "https://www.familyandcoupletherapyservices.co.uk/images/julia_halpin.jpg",
   url: "https://www.familyandcoupletherapyservices.co.uk/about",
