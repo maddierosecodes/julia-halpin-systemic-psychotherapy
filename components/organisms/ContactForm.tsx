@@ -5,8 +5,14 @@ import { useSearchParams } from 'next/navigation';
 import { Title } from '../atoms/Title';
 import { BodyText } from '../atoms/BodyText';
 import { Button } from '../atoms/Button';
-import HCaptcha from '@hcaptcha/react-hcaptcha';
+import { Turnstile } from '@marsidev/react-turnstile';
 import validator from 'validator';
+
+// Cloudflare's official "always passes" dummy site key, used only as a
+// development fallback so the widget renders before real Turnstile keys
+// are configured. See:
+// https://developers.cloudflare.com/turnstile/troubleshooting/testing/
+const TURNSTILE_DEV_SITE_KEY = '1x00000000000000000000AA';
 
 export type EnquiryType =
   | 'supervision'
@@ -389,12 +395,17 @@ export const ContactForm = () => {
         </div>
 
         <div className="flex flex-col items-center gap-2">
-          <HCaptcha
-            sitekey={process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY || ''}
-            onVerify={(token) => {
+          <Turnstile
+            siteKey={
+              process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ||
+              (process.env.NODE_ENV === 'development'
+                ? TURNSTILE_DEV_SITE_KEY
+                : '')
+            }
+            onSuccess={(token) => {
               // Only log in development
               if (process.env.NODE_ENV === 'development') {
-                console.log('hCaptcha verification successful');
+                console.log('Turnstile verification successful');
               }
               setCaptchaToken(token);
               setFormErrors((prev) => ({ ...prev, message: undefined }));
@@ -402,7 +413,7 @@ export const ContactForm = () => {
             onError={() => {
               // Log error without sensitive details
               if (process.env.NODE_ENV === 'development') {
-                console.error('hCaptcha verification failed');
+                console.error('Turnstile verification failed');
               }
               setFormErrors((prev) => ({
                 ...prev,
@@ -412,7 +423,7 @@ export const ContactForm = () => {
             }}
             onExpire={() => {
               if (process.env.NODE_ENV === 'development') {
-                console.log('hCaptcha token expired');
+                console.log('Turnstile token expired');
               }
               setCaptchaToken('');
               setFormErrors((prev) => ({
@@ -420,19 +431,10 @@ export const ContactForm = () => {
                 message: 'Captcha expired. Please verify again.'
               }));
             }}
-            onOpen={() => {
-              if (process.env.NODE_ENV === 'development') {
-                console.log('hCaptcha challenge opened');
-              }
+            options={{
+              theme: 'light',
+              size: 'normal'
             }}
-            onClose={() => {
-              if (process.env.NODE_ENV === 'development') {
-                console.log('hCaptcha challenge closed');
-              }
-            }}
-            theme="light"
-            size="normal"
-            reCaptchaCompat={false}
           />
           {!captchaToken && formErrors.message?.includes('captcha') && (
             <p className={errorStyles}>
